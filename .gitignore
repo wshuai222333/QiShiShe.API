@@ -1,0 +1,10 @@
+*/.vs/*
+*/bin/*
+*/obj/*
+*/.vscode/*
+*/_Log/*
+.vs
+.vs/*
+.xlsx
+.xls
+
