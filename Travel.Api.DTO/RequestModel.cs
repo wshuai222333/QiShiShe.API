@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Travel.Api.DTO {
+namespace QiShiShe.Api.DTO {
     /// <summary>
     /// 统一提交
     /// </summary>

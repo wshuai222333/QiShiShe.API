@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Travel.Entity.CGTLOGModels
+namespace QiShiShe.Entity.CGTLOGModels
 {
     public partial class ApiexceptionLog
     {

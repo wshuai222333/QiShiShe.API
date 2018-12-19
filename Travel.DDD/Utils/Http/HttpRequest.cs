@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 
-namespace Travel.DDD.Utils.Http {
+namespace QiShiShe.DDD.Utils.Http {
     /// <summary>
     /// http请求
     /// </summary>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Travel.Api.DTO.CheckTicket.Request {
+namespace QiShiShe.Api.DTO.CheckTicket.Request {
     public class RequestCheckTicket : RequestBaseModel {
         [Required(ErrorMessage = "必须填写")]
         public string TicketNumber { get; set; }

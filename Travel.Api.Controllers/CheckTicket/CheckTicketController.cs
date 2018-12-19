@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using Travel.Api.DTO;
-using Travel.Api.Service.CheckTicket;
+using QiShiShe.Api.DTO;
+using QiShiShe.Api.Service.CheckTicket;
 
-namespace Travel.Api.Controllers.CheckTicket {
+namespace QiShiShe.Api.Controllers.CheckTicket {
     /// <summary>
     /// 验票API
     /// </summary>

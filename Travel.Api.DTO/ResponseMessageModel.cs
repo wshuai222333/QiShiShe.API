@@ -1,4 +1,4 @@
-﻿namespace Travel.Api.DTO {
+﻿namespace QiShiShe.Api.DTO {
     /// <summary>
     /// api统一返回类
     /// </summary>

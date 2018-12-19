@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
 
-namespace Travel.DDD.EntityValidation {
+namespace QiShiShe.DDD.EntityValidation {
     /// <summary>
     /// 消息类
     /// [abc] a、b 或 c（简单类） 

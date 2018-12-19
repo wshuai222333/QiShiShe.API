@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Travel.DDD.Domain;
-using Travel.Entity.CGTLOGModels;
-using Travel.Repositories.EF;
+using QiShiShe.DDD.Domain;
+using QiShiShe.Entity.CGTLOGModels;
+using QiShiShe.Repositories.EF;
 
-namespace Travel.Entity.EFRepositories {
+namespace QiShiShe.Entity.EFRepositories {
     /// <summary>
     /// cgt_log数据库
     /// </summary>

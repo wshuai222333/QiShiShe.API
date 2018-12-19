@@ -8,9 +8,9 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using Travel.DDD.Config;
+using QiShiShe.DDD.Config;
 
-namespace Travel.DDD
+namespace QiShiShe.DDD
 {
     public class Encrpty {
         static IBlockCipher engine = new DesEngine();

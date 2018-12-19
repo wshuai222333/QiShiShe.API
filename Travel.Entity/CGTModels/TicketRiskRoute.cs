@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Travel.Entity.CGTModels
+namespace QiShiShe.Entity.CGTModels
 {
     public partial class TicketRiskRoute
     {

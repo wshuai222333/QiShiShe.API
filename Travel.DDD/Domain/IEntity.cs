@@ -1,4 +1,4 @@
-﻿namespace Travel.DDD.Domain {
+﻿namespace QiShiShe.DDD.Domain {
     /// <summary>
     /// 实体类标示接口
     /// </summary>

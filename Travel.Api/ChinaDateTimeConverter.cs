@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System;
 
-namespace Travel.Api {
+namespace QiShiShe.Api {
     public class ChinaDateTimeConverter: DateTimeConverterBase {
         private static IsoDateTimeConverter dtConverter = new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd HH:mm:ss" };
 

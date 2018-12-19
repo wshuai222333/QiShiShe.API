@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Travel.DDD.Config;
-using Travel.DDD.Logger.LoggerBase;
+using QiShiShe.DDD.Config;
+using QiShiShe.DDD.Logger.LoggerBase;
 
-namespace Travel.DDD.Logger
+namespace QiShiShe.DDD.Logger
 {
     /// <summary>
     /// 日志生产类

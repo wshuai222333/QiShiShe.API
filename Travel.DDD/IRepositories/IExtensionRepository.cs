@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using Travel.DDD.Domain;
-using Travel.DDD.IRepositories.Commons;
-using Travel.DDD.Specification;
+using QiShiShe.DDD.Domain;
+using QiShiShe.DDD.IRepositories.Commons;
+using QiShiShe.DDD.Specification;
 
-namespace Travel.DDD.IRepositories {
+namespace QiShiShe.DDD.IRepositories {
     /// <summary>
     /// 扩展的Repository操作规范
     /// </summary>

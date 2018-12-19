@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Travel.DDD.IRepositories.Commons {
+namespace QiShiShe.DDD.IRepositories.Commons {
     /// <summary>
     /// 对集合排序实现
     /// </summary>

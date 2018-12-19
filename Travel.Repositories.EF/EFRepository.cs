@@ -2,12 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Travel.DDD.Domain;
-using Travel.DDD.IRepositories;
-using Travel.DDD.IRepositories.Commons;
-using Travel.DDD.Specification;
+using QiShiShe.DDD.Domain;
+using QiShiShe.DDD.IRepositories;
+using QiShiShe.DDD.IRepositories.Commons;
+using QiShiShe.DDD.Specification;
 
-namespace Travel.Repositories.EF {
+namespace QiShiShe.Repositories.EF {
     /// <summary>
     /// 使用EF进行持久化
     /// </summary>

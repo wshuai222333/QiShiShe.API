@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Travel.DDD.Validation {
+namespace QiShiShe.DDD.Validation {
     /// <summary>  
     /// 操作正则表达式的公共类  
     /// </summary>      

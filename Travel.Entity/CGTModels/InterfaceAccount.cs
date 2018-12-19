@@ -1,7 +1,7 @@
 ﻿using System;
-using Travel.DDD.Domain;
+using QiShiShe.DDD.Domain;
 
-namespace Travel.Entity.CGTModels {
+namespace QiShiShe.Entity.CGTModels {
     public partial class InterfaceAccount: EntityBase {
         public int Id { get; set; }
         public string MerchantName { get; set; }

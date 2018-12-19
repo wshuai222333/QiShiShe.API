@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
-using Travel.DDD;
-using Travel.DDD.Config;
+using QiShiShe.DDD;
+using QiShiShe.DDD.Config;
 
 namespace TravelCheckTicketForA.Service {
     public class CheckTicketForAProcessor : ProcessorBase<CheckTicketResponseView> {

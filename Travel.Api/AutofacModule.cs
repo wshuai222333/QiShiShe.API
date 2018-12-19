@@ -1,9 +1,9 @@
 ﻿using Autofac;
 using System.Linq;
 using System.Reflection;
-using Travel.Api.DTO;
+using QiShiShe.Api.DTO;
 
-namespace Travel.Api {
+namespace QiShiShe.Api {
     /// <summary>
     /// autofac注入类
     /// </summary>
@@ -33,7 +33,7 @@ namespace Travel.Api {
                 .AsSelf()
                 .PropertiesAutowired();
 
-            var apiservice = Assembly.Load(new AssemblyName("Travel.Api.Service"));
+            var apiservice = Assembly.Load(new AssemblyName("QiShiShe.Api.Service"));
             builder.RegisterAssemblyTypes(apiservice)
                 .Where(t => t.Name.EndsWith("Service"))
                 .AsImplementedInterfaces()

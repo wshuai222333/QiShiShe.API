@@ -1,4 +1,4 @@
-﻿namespace Travel.DDD.EntityValidation {
+﻿namespace QiShiShe.DDD.EntityValidation {
     /// <summary>
     /// 验证信息实体
     /// </summary>

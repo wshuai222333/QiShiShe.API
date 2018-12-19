@@ -13,9 +13,9 @@ using System;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using Travel.DDD.Utils.Http;
+using QiShiShe.DDD.Utils.Http;
 
-namespace Travel.Api {
+namespace QiShiShe.Api {
     public class Startup {
         public Startup(IConfiguration configuration) {
             Configuration = configuration;
@@ -60,7 +60,7 @@ namespace Travel.Api {
 
             #region Autofac配置
             var autofac = new ContainerBuilder();
-            var assembly = Assembly.Load(new AssemblyName("Travel.Api.Controllers"));
+            var assembly = Assembly.Load(new AssemblyName("QiShiShe.Api.Controllers"));
             var manager = new ApplicationPartManager();
 
             manager.ApplicationParts.Add(new AssemblyPart(assembly));

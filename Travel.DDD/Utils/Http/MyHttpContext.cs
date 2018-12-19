@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Travel.DDD.Utils.Http {
+namespace QiShiShe.DDD.Utils.Http {
     public static class MyHttpContext {
         private static IHttpContextAccessor _accessor;
 

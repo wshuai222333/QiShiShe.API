@@ -1,7 +1,7 @@
 ﻿using System;
-using Travel.DDD.Validation;
+using QiShiShe.DDD.Validation;
 
-namespace Travel.DDD.EntityValidation {
+namespace QiShiShe.DDD.EntityValidation {
     /// <summary>
     /// 时间戳
     /// </summary>

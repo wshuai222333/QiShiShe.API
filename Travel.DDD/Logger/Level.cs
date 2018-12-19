@@ -1,4 +1,4 @@
-﻿namespace Travel.DDD.Logger {
+﻿namespace QiShiShe.DDD.Logger {
     /// <summary>
     /// 日志级别：DEBUG|INFO|WARN|ERROR|FATAL|OFF
     /// </summary>

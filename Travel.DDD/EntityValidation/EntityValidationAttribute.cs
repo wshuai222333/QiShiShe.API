@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 
 
-namespace Travel.DDD.EntityValidation {
+namespace QiShiShe.DDD.EntityValidation {
     /// <summary>
     /// 通用验证基类
     /// </summary>

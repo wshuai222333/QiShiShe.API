@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Travel.Entity.CGTALIModels
+namespace QiShiShe.Entity.CGTALIModels
 {
     public partial class TravelBatch
     {

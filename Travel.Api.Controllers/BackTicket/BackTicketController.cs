@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using Travel.Api.DTO;
-using Travel.Api.Service.BackTicket;
+using QiShiShe.Api.DTO;
+using QiShiShe.Api.Service.BackTicket;
 
-namespace Travel.Api.Controllers.BackTicket {
+namespace QiShiShe.Api.Controllers.BackTicket {
     /// <summary>
     /// 放款回调API
     /// </summary>

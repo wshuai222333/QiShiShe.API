@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
-using Travel.DDD.EntityValidation;
+using QiShiShe.DDD.EntityValidation;
 
-namespace Travel.DDD.Domain {
+namespace QiShiShe.DDD.Domain {
     /// <summary>
     /// 领域模型，实体模型基类，它可能有多种持久化方式，如DB,File,Redis,Mongodb,XML等
     /// </summary>

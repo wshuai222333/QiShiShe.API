@@ -3,7 +3,7 @@ using System;
 using System.IO;
 
 
-namespace Travel.DDD.Config {
+namespace QiShiShe.DDD.Config {
     /// <summary>
     /// 配置文件
     /// </summary>

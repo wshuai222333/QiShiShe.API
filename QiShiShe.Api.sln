@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{5D8EA6CF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QiShiShe.Api.DTO", "Travel.Api.DTO\QiShiShe.Api.DTO.csproj", "{E0E5F094-D367-4A72-B639-E9A32C5D5CEF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Travel.Entity", "Travel.Entity\Travel.Entity.csproj", "{0AB5AF44-495B-4399-AC3C-1F3E2BA0AA5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QiShiShe.Entity", "Travel.Entity\QiShiShe.Entity.csproj", "{0AB5AF44-495B-4399-AC3C-1F3E2BA0AA5B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{347D2D3D-8EBD-49C3-A03F-CDA53AE5848D}"
 EndProject
@@ -30,6 +30,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelCheckTicketForA.Service", "TravelCheckTicketForA.Service\TravelCheckTicketForA.Service.csproj", "{8E2799FE-152C-44F7-8A13-B0EC5339D445}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QiShiShe.Api.Test", "Travel.Api.Test\QiShiShe.Api.Test.csproj", "{92DF64D8-1A2A-44A2-9176-AAF189D37F1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QiShiShe.PetaPoco.Repositories", "QiShiShe.PetaPoco.Repositories\QiShiShe.PetaPoco.Repositories.csproj", "{893E899C-8D86-4B07-93B1-F6B624AC6A66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,10 @@ Global
 		{92DF64D8-1A2A-44A2-9176-AAF189D37F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92DF64D8-1A2A-44A2-9176-AAF189D37F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92DF64D8-1A2A-44A2-9176-AAF189D37F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893E899C-8D86-4B07-93B1-F6B624AC6A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893E899C-8D86-4B07-93B1-F6B624AC6A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893E899C-8D86-4B07-93B1-F6B624AC6A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893E899C-8D86-4B07-93B1-F6B624AC6A66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{2DE17034-1B0A-4787-B1B9-6E418AEB85F0} = {347D2D3D-8EBD-49C3-A03F-CDA53AE5848D}
 		{C355B556-0838-4814-BF6A-BDBBF6C5561D} = {C6CED321-CD1D-4D89-8075-0F78B673687E}
 		{8E2799FE-152C-44F7-8A13-B0EC5339D445} = {347D2D3D-8EBD-49C3-A03F-CDA53AE5848D}
+		{893E899C-8D86-4B07-93B1-F6B624AC6A66} = {C6CED321-CD1D-4D89-8075-0F78B673687E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4ECA9910-14B5-4BEF-9CAA-4BC018592829}

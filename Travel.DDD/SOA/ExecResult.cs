@@ -1,4 +1,4 @@
-﻿namespace Travel.DDD.SOA {
+﻿namespace QiShiShe.DDD.SOA {
     /// <summary>
     /// 公共数据返回类
     /// </summary>

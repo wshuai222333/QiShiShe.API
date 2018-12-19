@@ -1,11 +1,11 @@
 ﻿using System;
-using Travel.Api.DTO.CheckTicket.Request;
-using Travel.Api.DTO.CheckTicket.Response;
-using Travel.DDD.Logger;
-using Travel.Entity.CGTLOGModels;
+using QiShiShe.Api.DTO.CheckTicket.Request;
+using QiShiShe.Api.DTO.CheckTicket.Response;
+using QiShiShe.DDD.Logger;
+using QiShiShe.Entity.CGTLOGModels;
 using TravelCheckTicketForA.Service;
 
-namespace Travel.Api.Service.CheckTicket {
+namespace QiShiShe.Api.Service.CheckTicket {
     public class CheckTicketService : ApiBase<RequestCheckTicket> {
 
         public CheckTicketForAProcessor checkTicketForAProcessor { get; set; }

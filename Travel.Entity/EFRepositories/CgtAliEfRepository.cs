@@ -2,11 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Travel.DDD.Domain;
-using Travel.Entity.CGTALIModels;
-using Travel.Repositories.EF;
+using QiShiShe.DDD.Domain;
+using QiShiShe.Entity.CGTALIModels;
+using QiShiShe.Repositories.EF;
 
-namespace Travel.Entity.EFRepositories
+namespace QiShiShe.Entity.EFRepositories
 {
     /// <summary>
     /// cgt_ali数据库

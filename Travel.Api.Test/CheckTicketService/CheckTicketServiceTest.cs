@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Travel.Api.Service.CheckTicket;
+using QiShiShe.Api.Service.CheckTicket;
 
-namespace Travel.Api.Test.CheckTicketService
+namespace QiShiShe.Api.Test.CheckTicketService
 {
     [TestClass]
     public class CheckTicketServiceTest

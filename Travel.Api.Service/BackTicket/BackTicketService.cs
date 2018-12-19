@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Travel.Api.DTO.BackTicket.Request;
+using QiShiShe.Api.DTO.BackTicket.Request;
 
-namespace Travel.Api.Service.BackTicket {
+namespace QiShiShe.Api.Service.BackTicket {
     /// <summary>
     /// 放款回调接口
     /// </summary>

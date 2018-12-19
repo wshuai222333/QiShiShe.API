@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace Travel.DDD.IRepositories.Commons {
+namespace QiShiShe.DDD.IRepositories.Commons {
     /// <summary>
     /// 排序规范
     /// </summary>

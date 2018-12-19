@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Travel.DDD.Utils.Http {
+namespace QiShiShe.DDD.Utils.Http {
     public static class StaticHttpContextExtensions {
         public static void AddHttpContextAccessors(this IServiceCollection services) {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

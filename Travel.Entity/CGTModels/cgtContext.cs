@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Travel.DDD.Config;
+using QiShiShe.DDD.Config;
 
-namespace Travel.Entity.CGTModels {
+namespace QiShiShe.Entity.CGTModels {
     public partial class cgtContext : DbContext {
         public virtual DbSet<AbeerrorInfo> AbeerrorInfo {
             get; set;

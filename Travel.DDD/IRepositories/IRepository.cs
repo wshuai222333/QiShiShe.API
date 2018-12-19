@@ -1,7 +1,7 @@
-﻿using Travel.DDD.Domain;
-using Travel.DDD.UoW;
+﻿using QiShiShe.DDD.Domain;
+using QiShiShe.DDD.UoW;
 
-namespace Travel.DDD.IRepositories {
+namespace QiShiShe.DDD.IRepositories {
     /// <summary>
     /// 基本仓储操作接口
     /// out表示类型的协变,可以进行子类与父类的返回类型转换,in表示逆变

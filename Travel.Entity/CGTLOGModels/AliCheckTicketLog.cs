@@ -1,7 +1,7 @@
 ﻿using System;
-using Travel.DDD.Domain;
+using QiShiShe.DDD.Domain;
 
-namespace Travel.Entity.CGTLOGModels {
+namespace QiShiShe.Entity.CGTLOGModels {
     public partial class AliCheckTicketLog: EntityBase {
         public int AliCheckTicketLogId { get; set; }
         public DateTime? CreateTime { get; set; }

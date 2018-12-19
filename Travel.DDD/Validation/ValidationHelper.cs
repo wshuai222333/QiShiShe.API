@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Travel.DDD.Validation {
+namespace QiShiShe.DDD.Validation {
     public class ValidationHelper {
 
 

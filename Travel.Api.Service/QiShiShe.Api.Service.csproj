@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Travel.Api.DTO\QiShiShe.Api.DTO.csproj" />
-    <ProjectReference Include="..\Travel.Entity\Travel.Entity.csproj" />
+    <ProjectReference Include="..\Travel.Entity\QiShiShe.Entity.csproj" />
     <ProjectReference Include="..\Travel.Repositories.EF\QiShiShe.Repositories.EF.csproj" />
     <ProjectReference Include="..\TravelCheckTicketForA.Service\TravelCheckTicketForA.Service.csproj" />
   </ItemGroup>

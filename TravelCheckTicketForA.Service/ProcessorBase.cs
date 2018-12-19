@@ -1,9 +1,9 @@
 ﻿
 using Newtonsoft.Json;
 using System;
-using Travel.DDD.Logger;
-using Travel.DDD.SOA;
-using Travel.DDD.Utils.Http;
+using QiShiShe.DDD.Logger;
+using QiShiShe.DDD.SOA;
+using QiShiShe.DDD.Utils.Http;
 
 namespace TravelCheckTicketForA.Service {
     public abstract class ProcessorBase<TResponse, TResult> {

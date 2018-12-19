@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Travel.Api.Controllers {
+namespace QiShiShe.Api.Controllers {
     [Produces("application/json")]
     [Route("api/Test")]
     [EnableCors("AllowSameDomain")]

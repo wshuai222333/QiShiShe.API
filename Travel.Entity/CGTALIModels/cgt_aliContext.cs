@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Travel.DDD.Config;
+using QiShiShe.DDD.Config;
 
-namespace Travel.Entity.CGTALIModels {
+namespace QiShiShe.Entity.CGTALIModels {
     public partial class cgt_aliContext : DbContext {
         public virtual DbSet<AliEnterpriseOrder> AliEnterpriseOrder { get; set; }
         public virtual DbSet<TravelBatch> TravelBatch { get; set; }

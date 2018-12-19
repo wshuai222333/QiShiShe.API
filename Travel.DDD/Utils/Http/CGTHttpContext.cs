@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
 
-namespace Travel.DDD.Utils.Http {
+namespace QiShiShe.DDD.Utils.Http {
     /// <summary>
     /// 获取api请求上线文信息
     /// </summary>

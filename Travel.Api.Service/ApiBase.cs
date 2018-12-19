@@ -1,13 +1,12 @@
-﻿
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Linq;
 using System.Text;
-using Travel.Api.DTO;
-using Travel.DDD;
-using Travel.DDD.Logger;
+using QiShiShe.Api.DTO;
+using QiShiShe.DDD;
+using QiShiShe.DDD.Logger;
 
-namespace Travel.Api.Service {
+namespace QiShiShe.Api.Service {
     /// <summary>
     /// api统一抽象基类
     /// </summary> 

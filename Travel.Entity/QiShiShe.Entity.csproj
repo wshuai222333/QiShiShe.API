@@ -13,6 +13,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="PetaPoco.NetCore" Version="1.0.1" />
+    <PackageReference Include="T4" Version="2.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +26,25 @@
     <Reference Include="System.Web">
       <HintPath>System.Web</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Models\qishshe\QISHISHEDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QISHISHEDB.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Models\qishshe\QISHISHEDB.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>QISHISHEDB.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

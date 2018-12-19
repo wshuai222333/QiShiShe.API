@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Travel.DDD.Logger {
+namespace QiShiShe.DDD.Logger {
     /// <summary>
     /// 日志功能接口规范
     /// </summary>

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
-using Travel.DDD.Domain;
-using Travel.DDD.IRepositories.Commons;
+using QiShiShe.DDD.Domain;
+using QiShiShe.DDD.IRepositories.Commons;
 
-namespace Travel.DDD.IRepositories
+namespace QiShiShe.DDD.IRepositories
 {
     /// <summary>
     /// 提供排序功能的规范

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace Travel.DDD.Specification {
+namespace QiShiShe.DDD.Specification {
     public interface ISpecification<TEntity>
          where TEntity : class {
         /// <summary>

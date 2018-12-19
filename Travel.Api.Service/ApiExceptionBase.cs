@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Travel.Api.Service {
+namespace QiShiShe.Api.Service {
     /// <summary>
     /// 自定义错误基类
     /// </summary>

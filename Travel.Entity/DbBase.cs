@@ -1,10 +1,10 @@
-﻿using Travel.DDD.IRepositories;
-using Travel.Entity.CGTALIModels;
-using Travel.Entity.CGTLOGModels;
-using Travel.Entity.CGTModels;
-using Travel.Entity.EFRepositories;
+﻿using QiShiShe.DDD.IRepositories;
+using QiShiShe.Entity.CGTALIModels;
+using QiShiShe.Entity.CGTLOGModels;
+using QiShiShe.Entity.CGTModels;
+using QiShiShe.Entity.EFRepositories;
 
-namespace Travel.Entity {
+namespace QiShiShe.Entity {
     /// <summary>
     /// 数据库连接
     /// </summary>

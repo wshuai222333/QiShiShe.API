@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Travel.DDD.Config;
+using QiShiShe.DDD.Config;
 
-namespace Travel.Entity.CGTLOGModels
+namespace QiShiShe.Entity.CGTLOGModels
 {
     public partial class cgt_logContext : DbContext
     {

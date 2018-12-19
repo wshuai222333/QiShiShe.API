@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 
-namespace Travel.DDD.LinqExtensions {
+namespace QiShiShe.DDD.LinqExtensions {
     /// <summary>
     ///  ObjectContext扩展方法
     /// </summary>

@@ -1,7 +1,7 @@
-﻿using Travel.Api.DTO;
-using Travel.Entity;
+﻿using QiShiShe.Api.DTO;
+using QiShiShe.Entity;
 
-namespace Travel.Api.Service {
+namespace QiShiShe.Api.Service {
     /// <summary>
     /// 统一api接口类
     /// </summary>

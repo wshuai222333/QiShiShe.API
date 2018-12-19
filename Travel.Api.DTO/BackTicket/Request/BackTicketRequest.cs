@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Travel.Api.DTO.BackTicket.Request {
+namespace QiShiShe.Api.DTO.BackTicket.Request {
     /// <summary>
     /// 放款回调请求实体
     /// </summary>

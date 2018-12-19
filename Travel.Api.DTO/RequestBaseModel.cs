@@ -2,9 +2,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
-using Travel.DDD.EntityValidation;
+using QiShiShe.DDD.EntityValidation;
 
-namespace Travel.Api.DTO {
+namespace QiShiShe.Api.DTO {
     /// <summary>
     /// 统一提交基类
     /// </summary>

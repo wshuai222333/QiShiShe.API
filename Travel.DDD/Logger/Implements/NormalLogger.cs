@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading;
 
-namespace Travel.DDD.Logger.LoggerBase {
+namespace QiShiShe.DDD.Logger.LoggerBase {
     /// <summary>
     /// 文本日志
     /// </summary>

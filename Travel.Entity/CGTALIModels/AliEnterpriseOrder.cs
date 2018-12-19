@@ -1,7 +1,7 @@
 ﻿using System;
-using Travel.DDD.Domain;
+using QiShiShe.DDD.Domain;
 
-namespace Travel.Entity.CGTALIModels {
+namespace QiShiShe.Entity.CGTALIModels {
     public partial class AliEnterpriseOrder : EntityBase {
         public int AliEnterpriseOrderId { get; set; }
         public string OrderId { get; set; }

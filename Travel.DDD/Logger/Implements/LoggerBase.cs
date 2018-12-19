@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
-namespace Travel.DDD.Logger.LoggerBase {
+namespace QiShiShe.DDD.Logger.LoggerBase {
     /// <summary>
     /// 日志核心基类
     /// 模版方法模式，对InputLogger开放，对其它日志逻辑隐藏，InputLogger可以有多种实现
