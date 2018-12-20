@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\QiShiShe.PetaPoco.Repositories\QiShiShe.PetaPoco.Repositories.csproj" />
     <ProjectReference Include="..\Travel.Api.DTO\QiShiShe.Api.DTO.csproj" />
     <ProjectReference Include="..\Travel.Entity\QiShiShe.Entity.csproj" />
     <ProjectReference Include="..\Travel.Repositories.EF\QiShiShe.Repositories.EF.csproj" />

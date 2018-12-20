@@ -168,6 +168,60 @@ namespace QiShiShe.Entity.Model
 
 
 	
+	 [TableName("dbo.Enterprise")]
+	 [PrimaryKey("EnterpriseId", autoIncrement = false)]
+	 [ExplicitColumns]
+     public partial class Enterprise:QISHISHEDB.Record<Enterprise>
+	 {
+		
+		[Column] public int EnterpriseId {get;set;}
+		[Column] public string EnterpriseName {get;set;}
+		[Column] public string EnterpriseCode {get;set;}
+		[Column] public string ContactsName {get;set;}
+		[Column] public string ContactsPhone {get;set;}
+		[Column] public string ContactsEmail {get;set;}
+		[Column] public int? Status {get;set;}
+		[Column] public DateTime? CreateTIme {get;set;}
+		[Column] public DateTime? UpdateTime {get;set;}
+		[Column] public int? CreateUserId {get;set;}
+		[Column] public int? UpdateUserId {get;set;}
+		[Column] public int? DepartmentId {get;set;}
+		
+	 }
+	
+	 [TableName("dbo.Staff")]
+	 [PrimaryKey("StaffId", autoIncrement = false)]
+	 [ExplicitColumns]
+     public partial class Staff:QISHISHEDB.Record<Staff>
+	 {
+		
+		[Column] public int StaffId {get;set;}
+		[Column] public int? EnterpriseId {get;set;}
+		[Column] public string StaffIName {get;set;}
+		[Column] public string StaffCardNo {get;set;}
+		[Column] public DateTime? StaffBirthday {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
+		[Column] public DateTime? UpdateTime {get;set;}
+		[Column] public int? CreateId {get;set;}
+		[Column] public int? UpdateId {get;set;}
+		
+	 }
+	
+	 [TableName("dbo.Department")]
+	 [PrimaryKey("DepartmentId", autoIncrement = false)]
+	 [ExplicitColumns]
+     public partial class Department:QISHISHEDB.Record<Department>
+	 {
+		
+		[Column] public int DepartmentId {get;set;}
+		[Column] public string DepartmentName {get;set;}
+		[Column] public string CreateTime {get;set;}
+		[Column] public int? CreateId {get;set;}
+		[Column] public string UpdateTime {get;set;}
+		[Column] public int? UpdateId {get;set;}
+		
+	 }
+	
 	 [TableName("dbo.BackgroundUser")]
 	 [PrimaryKey("BackgroundUserId", autoIncrement = false)]
 	 [ExplicitColumns]
