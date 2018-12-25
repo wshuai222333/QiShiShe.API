@@ -39,5 +39,17 @@ WHERE 1=1 {0}
 ORDER BY CreateTime DESC", wherestr);
             return QISHISHEDB.GetInstance().Page<Enterprise>(pageindex, pagesize, sql);
         }
+        public int UpdateEnterprise(Enterprise model) {
+            string sql = string.Empty;
+            string wherestr = string.Empty;
+
+            if (model.EnterpriseId > 0) {
+                wherestr += " AND EnterpriseId = @0";
+            }
+            sql = string.Format(@"
+SET EnterpriseName=@1,EnterpriseCode = @2,ContactsName=@3,ContactsPhone = @4,ContactsEmail=@5,UpdateTime=@6
+", wherestr);
+            return QISHISHEDB.GetInstance().Update<Enterprise>(sql, model.EnterpriseName, model.EnterpriseCode, model.ContactsName, model.ContactsPhone,model.ContactsEmail, model.UpdateTime);
+        }
     }
 }

@@ -181,11 +181,10 @@ namespace QiShiShe.Entity.Model
 		[Column] public string ContactsPhone {get;set;}
 		[Column] public string ContactsEmail {get;set;}
 		[Column] public int? Status {get;set;}
-		[Column] public DateTime? CreateTIme {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
 		[Column] public DateTime? UpdateTime {get;set;}
 		[Column] public int? CreateUserId {get;set;}
 		[Column] public int? UpdateUserId {get;set;}
-		[Column] public int? DepartmentId {get;set;}
 		
 	 }
 	
@@ -204,6 +203,7 @@ namespace QiShiShe.Entity.Model
 		[Column] public DateTime? UpdateTime {get;set;}
 		[Column] public int? CreateId {get;set;}
 		[Column] public int? UpdateId {get;set;}
+		[Column] public int? DepartmentId {get;set;}
 		
 	 }
 	

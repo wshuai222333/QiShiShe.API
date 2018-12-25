@@ -1,10 +1,10 @@
-﻿using QiShiShe.Api.DTO.Boss.Request;
+﻿using QiShiShe.Api.DTO.Boss.Request.Enterprise;
 using QiShiShe.Entity.Model;
 using QiShiShe.PetaPoco.Repositories.QiShiShe;
 using System;
 
 namespace QiShiShe.Api.Service.Boss {
-    public class AddEnterpriseService : ApiOriBase<RequestAddEnterprise> {
+    public class UpdateEnterpriseService : ApiOriBase<RequestUpdateEnterprise> {
         #region 注入服务
         public EnterpriseRep enterpriseRep { get; set; }
         #endregion
@@ -18,9 +18,10 @@ namespace QiShiShe.Api.Service.Boss {
                 ContactsPhone = this.Parameter.ContactsPhone,
                 EnterpriseName = this.Parameter.EnterpriseName,
                 EnterpriseCode = this.Parameter.EnterpriseCode,
-                CreateTime = DateTime.Now
+                UpdateTime = DateTime.Now
             };
             this.Result.Data = enterpriseRep.Insert(enterprise);
+            this.Result.Data = enterpriseRep.UpdateEnterprise(enterprise);
         }
     }
 }
