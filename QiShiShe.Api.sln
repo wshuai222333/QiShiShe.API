@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28407.52
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QiShiShe.Api", "Travel.Api\QiShiShe.Api.csproj", "{FD3762B0-ECF1-4806-8658-FD28BBAEB982}"
 EndProject
@@ -29,9 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QiShiShe.Repositories.EF", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelCheckTicketForA.Service", "TravelCheckTicketForA.Service\TravelCheckTicketForA.Service.csproj", "{8E2799FE-152C-44F7-8A13-B0EC5339D445}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QiShiShe.Api.Test", "Travel.Api.Test\QiShiShe.Api.Test.csproj", "{92DF64D8-1A2A-44A2-9176-AAF189D37F1A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QiShiShe.PetaPoco.Repositories", "QiShiShe.PetaPoco.Repositories\QiShiShe.PetaPoco.Repositories.csproj", "{893E899C-8D86-4B07-93B1-F6B624AC6A66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QiShiShe.PetaPoco.Repositories", "QiShiShe.PetaPoco.Repositories\QiShiShe.PetaPoco.Repositories.csproj", "{893E899C-8D86-4B07-93B1-F6B624AC6A66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +69,6 @@ Global
 		{8E2799FE-152C-44F7-8A13-B0EC5339D445}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E2799FE-152C-44F7-8A13-B0EC5339D445}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E2799FE-152C-44F7-8A13-B0EC5339D445}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92DF64D8-1A2A-44A2-9176-AAF189D37F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92DF64D8-1A2A-44A2-9176-AAF189D37F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92DF64D8-1A2A-44A2-9176-AAF189D37F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92DF64D8-1A2A-44A2-9176-AAF189D37F1A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{893E899C-8D86-4B07-93B1-F6B624AC6A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{893E899C-8D86-4B07-93B1-F6B624AC6A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{893E899C-8D86-4B07-93B1-F6B624AC6A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
