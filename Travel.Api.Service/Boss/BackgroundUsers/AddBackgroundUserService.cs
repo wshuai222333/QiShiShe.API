@@ -2,11 +2,9 @@
 using QiShiShe.Entity.Model;
 using QiShiShe.PetaPoco.Repositories.QiShiShe;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QiShiShe.Api.Service.Boss {
-    public class UpdateBackgroundUserService : ApiOriBase<RequestUpdateBackgroundUser> {
+    public class AddBackgroundUserService : ApiOriBase<RequestAddBackgroundUser> {
         #region 注入服务
         public BackgroundUserRep backgroundUserRep { get; set; }
         #endregion
@@ -18,10 +16,9 @@ namespace QiShiShe.Api.Service.Boss {
                 UserName = this.Parameter.UserName,
                 UserPwd = this.Parameter.UserPwd,
                 RealName = this.Parameter.RealName,
-                UpdateTime = DateTime.Now
+                CreateTime = DateTime.Now
             };
-            this.Result.Data = backgroundUserRep.UpdateBackgroundUser(backgroundUser);
+            this.Result.Data = backgroundUserRep.Insert(backgroundUser);
         }
     }
-
 }

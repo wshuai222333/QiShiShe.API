@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace QiShiShe.Api.DTO.Boss.Request {
+﻿namespace QiShiShe.Api.DTO.Boss.Request {
     public class RequestAddBackgroundUser : RequestOriBaseModel {
         public string UserName { get; set; }
 
