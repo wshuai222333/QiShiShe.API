@@ -215,10 +215,11 @@ namespace QiShiShe.Entity.Model
 		
 		[Column] public int DepartmentId {get;set;}
 		[Column] public string DepartmentName {get;set;}
-		[Column] public string CreateTime {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
 		[Column] public int? CreateId {get;set;}
-		[Column] public string UpdateTime {get;set;}
+		[Column] public DateTime? UpdateTime {get;set;}
 		[Column] public int? UpdateId {get;set;}
+		[Column] public int? EnterpriseId {get;set;}
 		
 	 }
 	
