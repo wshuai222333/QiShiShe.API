@@ -13,12 +13,10 @@ namespace QiShiShe.Api.Service.Boss {
         /// </summary>
         protected override void ExecuteMethod() {
             var backgroundUser = new BackgroundUser() {
-                UserName = this.Parameter.UserName,
-                UserPwd = Parameter.UserPwd,
-                RealName = this.Parameter.RealName,
-                UpdateTime = DateTime.Now
+                BackgroundUserId = this.Parameter.BackgroundUserId,
+                Status = this.Parameter.Status
             };
-            this.Result.Data = backgroundUserRep.UpdateBackgroundUser(backgroundUser);
+            this.Result.Data = backgroundUserRep.UpdateStatus(backgroundUser);
         }
     }
 

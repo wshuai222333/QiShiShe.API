@@ -14,11 +14,11 @@ namespace QiShiShe.Api {
         /// <param name="builder"></param>
         protected override void Load(ContainerBuilder builder) {
             //petapoco仓储注入
-            //var petapocobase_repository = Assembly.Load(new AssemblyName("CGT.PetaPoco.Repositories"));
-            //builder.RegisterAssemblyTypes(petapocobase_repository)
-            //    .Where(t => t.Name.EndsWith("Rep"))
-            //    .AsSelf()
-            //    .PropertiesAutowired();
+            var petapocobase_repository = Assembly.Load(new AssemblyName("QiShiShe.PetaPoco.Repositories"));
+            builder.RegisterAssemblyTypes(petapocobase_repository)
+                .Where(t => t.Name.EndsWith("Rep"))
+                .AsSelf()
+                .PropertiesAutowired();
 
             ////mongodb仓储注入
             //var mongo_model = Assembly.Load(new AssemblyName("CGT.Entity"));
@@ -52,12 +52,12 @@ namespace QiShiShe.Api {
                 .PropertiesAutowired();
 
             //CGT.CheckTicket.Service 业务注入
-            var checkticketservice = Assembly.Load(new AssemblyName("TravelCheckTicketForA.Service"));
-            builder.RegisterAssemblyTypes(checkticketservice)
-                .Where(t => t.Name.EndsWith("Processor"))
-                .AsImplementedInterfaces()
-                .AsSelf()
-                .PropertiesAutowired();
+            //var checkticketservice = Assembly.Load(new AssemblyName("TravelCheckTicketForA.Service"));
+            //builder.RegisterAssemblyTypes(checkticketservice)
+            //    .Where(t => t.Name.EndsWith("Processor"))
+            //    .AsImplementedInterfaces()
+            //    .AsSelf()
+            //    .PropertiesAutowired();
         }
     }
 }

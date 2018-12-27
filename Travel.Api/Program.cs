@@ -23,6 +23,6 @@ namespace QiShiShe.Api {
             .UseContentRoot(Directory.GetCurrentDirectory())
             .UseIISIntegration()
             .UseStartup<Startup>()
-            .UseUrls("http://*:7002");
+            .UseUrls("http://*:8002");
     }
 }

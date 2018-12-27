@@ -168,8 +168,43 @@ namespace QiShiShe.Entity.Model
 
 
 	
+	 [TableName("dbo.BackgroundUser")]
+	 [PrimaryKey("BackgroundUserId")]
+	 [ExplicitColumns]
+     public partial class BackgroundUser:QISHISHEDB.Record<BackgroundUser>
+	 {
+		
+		[Column] public int BackgroundUserId {get;set;}
+		[Column] public int? BackgroundRoleId {get;set;}
+		[Column] public string UserName {get;set;}
+		[Column] public string UserPwd {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
+		[Column] public string RealName {get;set;}
+		[Column] public int? Status {get;set;}
+		[Column] public DateTime? UpdateTime {get;set;}
+		[Column] public int? UpdateUserId {get;set;}
+		[Column] public int? CreateUserId {get;set;}
+		
+	 }
+	
+	 [TableName("dbo.Department")]
+	 [PrimaryKey("DepartmentId")]
+	 [ExplicitColumns]
+     public partial class Department:QISHISHEDB.Record<Department>
+	 {
+		
+		[Column] public int DepartmentId {get;set;}
+		[Column] public string DepartmentName {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
+		[Column] public int? CreateId {get;set;}
+		[Column] public DateTime? UpdateTime {get;set;}
+		[Column] public int? UpdateId {get;set;}
+		[Column] public int? EnterpriseId {get;set;}
+		
+	 }
+	
 	 [TableName("dbo.Enterprise")]
-	 [PrimaryKey("EnterpriseId", autoIncrement = false)]
+	 [PrimaryKey("EnterpriseId")]
 	 [ExplicitColumns]
      public partial class Enterprise:QISHISHEDB.Record<Enterprise>
 	 {
@@ -189,7 +224,7 @@ namespace QiShiShe.Entity.Model
 	 }
 	
 	 [TableName("dbo.Staff")]
-	 [PrimaryKey("StaffId", autoIncrement = false)]
+	 [PrimaryKey("StaffId")]
 	 [ExplicitColumns]
      public partial class Staff:QISHISHEDB.Record<Staff>
 	 {
@@ -204,41 +239,6 @@ namespace QiShiShe.Entity.Model
 		[Column] public int? CreateId {get;set;}
 		[Column] public int? UpdateId {get;set;}
 		[Column] public int? DepartmentId {get;set;}
-		
-	 }
-	
-	 [TableName("dbo.Department")]
-	 [PrimaryKey("DepartmentId", autoIncrement = false)]
-	 [ExplicitColumns]
-     public partial class Department:QISHISHEDB.Record<Department>
-	 {
-		
-		[Column] public int DepartmentId {get;set;}
-		[Column] public string DepartmentName {get;set;}
-		[Column] public DateTime? CreateTime {get;set;}
-		[Column] public int? CreateId {get;set;}
-		[Column] public DateTime? UpdateTime {get;set;}
-		[Column] public int? UpdateId {get;set;}
-		[Column] public int? EnterpriseId {get;set;}
-		
-	 }
-	
-	 [TableName("dbo.BackgroundUser")]
-	 [PrimaryKey("BackgroundUserId", autoIncrement = false)]
-	 [ExplicitColumns]
-     public partial class BackgroundUser:QISHISHEDB.Record<BackgroundUser>
-	 {
-		
-		[Column] public int BackgroundUserId {get;set;}
-		[Column] public int? BackgroundRoleId {get;set;}
-		[Column] public string UserName {get;set;}
-		[Column] public string UserPwd {get;set;}
-		[Column] public DateTime? CreateTime {get;set;}
-		[Column] public string RealName {get;set;}
-		[Column] public int? Status {get;set;}
-		[Column] public DateTime? UpdateTime {get;set;}
-		[Column] public int? UpdateUserId {get;set;}
-		[Column] public int? CreateUserId {get;set;}
 		
 	 }
 

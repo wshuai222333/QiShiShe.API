@@ -46,14 +46,29 @@ ORDER BY CreateTime DESC", wherestr);
         public int UpdateBackgroundUser(BackgroundUser model) {
             string sql = string.Empty;
             string wherestr = string.Empty;
-           
-            if (model.BackgroundUserId>0) {
+
+            if (model.BackgroundUserId > 0) {
                 wherestr += " AND BackgroundUserId = @0";
             }
             sql = string.Format(@"
 SET UserName=@1,UserPwd = @2,RealName=@3,UpdateTime = @4
+WHERE 1=1 {0}
 ", wherestr);
-            return QISHISHEDB.GetInstance().Update<BackgroundUser>(sql,model.BackgroundUserId,model.UserName,model.UserPwd,model.RealName,model.UpdateTime);
+            return QISHISHEDB.GetInstance().Update<BackgroundUser>(sql, model.BackgroundUserId, model.UserName, model.UserPwd, model.RealName, model.UpdateTime);
+        }
+
+        public int UpdateStatus(BackgroundUser model) {
+            string sql = string.Empty;
+            string wherestr = string.Empty;
+
+            if (model.BackgroundUserId > 0) {
+                wherestr += " AND BackgroundUserId = @0";
+            }
+            sql = string.Format(@"
+SET Status=@1
+WHERE 1=1 {0}
+", wherestr);
+            return QISHISHEDB.GetInstance().Update<BackgroundUser>(sql, model.BackgroundUserId, model.Status);
         }
     }
 }

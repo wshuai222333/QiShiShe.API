@@ -18,8 +18,13 @@ namespace QiShiShe.Api.Service.Boss {
             };
             var user = backgroundUserRep.GetBackgroundUser(backgroundUser);
             if (user != null) {
-                this.Result.Data = user;
-            } else {
+                if (user.Status==1) {
+                    this.Result.Data = user;
+                } else {
+                    throw new AggregateException("用户已被停用！");
+                }
+            }
+            else {
                 throw new AggregateException("用户名或密码不正确！");
             }
 

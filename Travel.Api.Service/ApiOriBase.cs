@@ -69,7 +69,7 @@ namespace QiShiShe.Api.Service {
             //    throw new MerchantException();
             //}
             //验证sign
-            var userKey = "";
+            var userKey = "823C2561D42946B98CE8652614C43FED";
             if (!this.Parameter.Sign.Equals(GetMySign(userKey))) {
                 //LoggerFactory.Instance.Logger_Debug(GetMySignStr(agent.UserKey)+"|"+ GetMySign(agent.UserKey)+"|"+ this.Parameter.Sign, "SignError");
                 throw new ApiSignException("Sign");

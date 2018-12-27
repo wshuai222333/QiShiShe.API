@@ -16,9 +16,17 @@ namespace QiShiShe.Api.Service.Boss {
                 UserName = this.Parameter.UserName,
                 UserPwd = this.Parameter.UserPwd,
                 RealName = this.Parameter.RealName,
-                CreateTime = DateTime.Now
+                CreateTime = DateTime.Now,
+                UpdateTime = DateTime.Now,
+                Status = 1,
+                BackgroundUserId = this.Parameter.BackgroundUserId
             };
-            this.Result.Data = backgroundUserRep.Insert(backgroundUser);
+            if (this.Parameter.BackgroundUserId > 0) {
+                this.Result.Data = backgroundUserRep.UpdateBackgroundUser(backgroundUser);
+            } else {
+                this.Result.Data = backgroundUserRep.Insert(backgroundUser);
+            }
+
         }
     }
 }
