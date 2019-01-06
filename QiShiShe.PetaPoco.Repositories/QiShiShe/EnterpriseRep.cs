@@ -48,8 +48,9 @@ ORDER BY CreateTime DESC", wherestr);
             }
             sql = string.Format(@"
 SET EnterpriseName=@1,EnterpriseCode = @2,ContactsName=@3,ContactsPhone = @4,ContactsEmail=@5,UpdateTime=@6
+WHERE 1=1 {0}
 ", wherestr);
-            return QISHISHEDB.GetInstance().Update<Enterprise>(sql, model.EnterpriseName, model.EnterpriseCode, model.ContactsName, model.ContactsPhone,model.ContactsEmail, model.UpdateTime);
+            return QISHISHEDB.GetInstance().Update<Enterprise>(sql,model.EnterpriseId, model.EnterpriseName, model.EnterpriseCode, model.ContactsName, model.ContactsPhone,model.ContactsEmail, model.UpdateTime);
         }
     }
 }

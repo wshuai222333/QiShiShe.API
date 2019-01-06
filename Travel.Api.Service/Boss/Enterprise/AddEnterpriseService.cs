@@ -18,9 +18,21 @@ namespace QiShiShe.Api.Service.Boss {
                 ContactsPhone = this.Parameter.ContactsPhone,
                 EnterpriseName = this.Parameter.EnterpriseName,
                 EnterpriseCode = this.Parameter.EnterpriseCode,
-                CreateTime = DateTime.Now
+                CreateTime = DateTime.Now,
+                UpdateTime = DateTime.Now,
+                Status =1,
+                EnterpriseId = this.Parameter.EnterpriseId
             };
-            this.Result.Data = enterpriseRep.Insert(enterprise);
+
+            if (this.Parameter.EnterpriseId>0)
+            {
+                this.Result.Data = enterpriseRep.UpdateEnterprise(enterprise);
+            }
+            else
+            {
+                this.Result.Data = enterpriseRep.Insert(enterprise);
+            }
+           
         }
     }
 }

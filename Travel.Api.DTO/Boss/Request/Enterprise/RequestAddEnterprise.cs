@@ -9,5 +9,7 @@
 
         public string ContactsPhone { get; set; }
         public string ContactsEmail { get; set; }
+
+        public int EnterpriseId { get; set; }
     }
 }
