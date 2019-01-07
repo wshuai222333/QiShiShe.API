@@ -1,5 +1,6 @@
 ﻿using PetaPoco.NetCore;
 using QiShiShe.Entity.Model;
+using System.Collections.Generic;
 
 namespace QiShiShe.PetaPoco.Repositories.QiShiShe {
     public class EnterpriseRep {
@@ -38,6 +39,17 @@ FROM    dbo.Enterprise
 WHERE 1=1 {0}
 ORDER BY CreateTime DESC", wherestr);
             return QISHISHEDB.GetInstance().Page<Enterprise>(pageindex, pagesize, sql);
+        }
+        public List<Enterprise> GetEnterpriseList() {
+            string sql = string.Empty;
+            string wherestr = string.Empty;
+
+            sql = string.Format(@"
+SELECT  *
+FROM    dbo.Enterprise
+WHERE 1=1 {0}
+ORDER BY CreateTime DESC", wherestr);
+            return QISHISHEDB.GetInstance().Fetch<Enterprise>(sql);
         }
         public int UpdateEnterprise(Enterprise model) {
             string sql = string.Empty;

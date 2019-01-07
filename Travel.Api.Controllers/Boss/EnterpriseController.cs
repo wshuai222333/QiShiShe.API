@@ -20,6 +20,8 @@ namespace QiShiShe.Api.Controllers.Boss {
 
         public UpdateEnterpriseService updateEnterpriseService { get; set; }
 
+        public GetEnterpriseListSelectService getEnterpriseListSelectService { get; set; }
+
         #endregion
 
         [Route("AddEnterprise"), HttpPost]
@@ -33,6 +35,10 @@ namespace QiShiShe.Api.Controllers.Boss {
         [Route("GetEnterpriseList"), HttpPost]
         public async Task<ResponseMessageModel> GetEnterpriseList([FromBody]RequestGetEnterpriseList model) {
             return await Task.Run(() => getEnterpriseListService.Execute(model));
+        }
+        [Route("GetEnterpriseListSelect"), HttpPost]
+        public async Task<ResponseMessageModel> GetEnterpriseListSelect([FromBody]RequestGetEnterpriseListSelect model) {
+            return await Task.Run(() => getEnterpriseListSelectService.Execute(model));
         }
         [Route("UpdateEnterprise"), HttpPost]
         public async Task<ResponseMessageModel> UpdateEnterprise([FromBody]RequestUpdateEnterprise model) {

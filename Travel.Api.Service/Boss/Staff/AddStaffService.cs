@@ -19,11 +19,20 @@ namespace QiShiShe.Api.Service.Boss {
                 EnterpriseId = this.Parameter.EnterpriseId,
                 StaffBirthday = this.Parameter.StaffBirthday,
                 CreateTime = DateTime.Now,
+                UpdateTime = DateTime.Now,
                 StaffCardNo = this.Parameter.StaffCardNo,
-                StaffIName = this.Parameter.StaffIName,
+                StaffName = this.Parameter.StaffName,
+                Status = 1,
+                StaffId = this.Parameter.StaffId,
+                EnterpriseName = this.Parameter.EnterpriseName
 
             };
-            this.Result.Data = staffRep.Insert(staff);
+            if (this.Parameter.StaffId > 0) {
+                this.Result.Data = staffRep.UpdateStaff(staff);
+            } else {
+                this.Result.Data = staffRep.Insert(staff);
+            }
+
         }
     }
 }

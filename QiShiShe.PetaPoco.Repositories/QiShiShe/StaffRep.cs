@@ -34,12 +34,18 @@ namespace QiShiShe.PetaPoco.Repositories.QiShiShe {
             if (model.EnterpriseId > 0) {
                 wherestr += " AND EnterpriseId = @0";
             }
+            if (!string.IsNullOrWhiteSpace(model.StaffName)) {
+                wherestr += " AND StaffName = @1";
+            }
+            if (!string.IsNullOrWhiteSpace(model.StaffCardNo)) {
+                wherestr += " AND StaffCardNo = @2";
+            }
             sql = string.Format(@"
 SELECT  *
 FROM    dbo.Staff
 WHERE 1=1 {0}
 ORDER BY CreateTime DESC", wherestr);
-            return QISHISHEDB.GetInstance().Page<Staff>(pageindex, pagesize, sql, model.EnterpriseId);
+            return QISHISHEDB.GetInstance().Page<Staff>(pageindex, pagesize, sql, model.EnterpriseId,model.StaffName,model.StaffCardNo);
         }
         public int UpdateStaff(Staff model) {
             string sql = string.Empty;
@@ -49,9 +55,10 @@ ORDER BY CreateTime DESC", wherestr);
                 wherestr += " AND StaffId = @0";
             }
             sql = string.Format(@"
-SET StaffIName=@1,StaffBirthday = @2,StaffCardNo=@3,DepartmentId = @4,UpdateTime=@5
+SET StaffName=@1,StaffBirthday = @2,StaffCardNo=@3,DepartmentId = @4,UpdateTime=@5
+WHERE 1=1 {0}
 ", wherestr);
-            return QISHISHEDB.GetInstance().Update<Staff>(sql, model.StaffIName, model.StaffBirthday, model.StaffCardNo, model.DepartmentId, model.UpdateTime);
+            return QISHISHEDB.GetInstance().Update<Staff>(sql,model.StaffId, model.StaffName, model.StaffBirthday, model.StaffCardNo, model.DepartmentId, model.UpdateTime);
         }
     }
 }

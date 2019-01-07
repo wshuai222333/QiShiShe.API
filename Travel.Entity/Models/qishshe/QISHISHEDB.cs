@@ -231,7 +231,8 @@ namespace QiShiShe.Entity.Model
 		
 		[Column] public int StaffId {get;set;}
 		[Column] public int? EnterpriseId {get;set;}
-		[Column] public string StaffIName {get;set;}
+		[Column] public string EnterpriseName {get;set;}
+		[Column] public string StaffName {get;set;}
 		[Column] public string StaffCardNo {get;set;}
 		[Column] public DateTime? StaffBirthday {get;set;}
 		[Column] public DateTime? CreateTime {get;set;}
@@ -239,6 +240,7 @@ namespace QiShiShe.Entity.Model
 		[Column] public int? CreateId {get;set;}
 		[Column] public int? UpdateId {get;set;}
 		[Column] public int? DepartmentId {get;set;}
+		[Column] public int? Status {get;set;}
 		
 	 }
 

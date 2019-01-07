@@ -18,7 +18,7 @@ namespace QiShiShe.Api.Service.Boss {
                 StaffBirthday = this.Parameter.StaffBirthday,
                 UpdateTime = DateTime.Now,
                 StaffCardNo = this.Parameter.StaffCardNo,
-                StaffIName = this.Parameter.StaffIName,
+                StaffName = this.Parameter.StaffName,
 
             };
             this.Result.Data = staffRep.UpdateStaff(staff);
