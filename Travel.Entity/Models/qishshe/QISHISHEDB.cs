@@ -241,6 +241,10 @@ namespace QiShiShe.Entity.Model
 		[Column] public int? UpdateId {get;set;}
 		[Column] public int? DepartmentId {get;set;}
 		[Column] public int? Status {get;set;}
+		[Column] public int? Integral {get;set;}
+		[Column] public string UserName {get;set;}
+		[Column] public string UserPwd {get;set;}
+		[Column] public string Phone {get;set;}
 		
 	 }
 

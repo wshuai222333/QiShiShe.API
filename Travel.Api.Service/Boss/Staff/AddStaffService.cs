@@ -24,8 +24,11 @@ namespace QiShiShe.Api.Service.Boss {
                 StaffName = this.Parameter.StaffName,
                 Status = 1,
                 StaffId = this.Parameter.StaffId,
-                EnterpriseName = this.Parameter.EnterpriseName
-
+                EnterpriseName = this.Parameter.EnterpriseName,
+                Integral = 0,
+                UserName = this.Parameter.Phone,
+                UserPwd = this.Parameter.StaffCardNo.Substring(this.Parameter.StaffCardNo.Length - 6, 6),
+                Phone = this.Parameter.Phone
             };
             if (this.Parameter.StaffId > 0) {
                 this.Result.Data = staffRep.UpdateStaff(staff);

@@ -15,5 +15,7 @@ namespace QiShiShe.Api.DTO.Boss.Request.Staff {
         public int StaffId { get; set; }
 
         public string EnterpriseName { get; set; }
+
+        public string Phone { get; set; }
     }
 }

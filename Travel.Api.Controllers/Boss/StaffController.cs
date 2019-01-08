@@ -19,6 +19,8 @@ namespace QiShiShe.Api.Controllers.Boss {
 
         public UpdateStaffService updateStaffService { get; set; }
 
+        public UpdateStaffIntegralService updateStaffIntegralService { get; set;}
+
         #endregion
 
         [Route("AddStaff"), HttpPost]
@@ -36,6 +38,10 @@ namespace QiShiShe.Api.Controllers.Boss {
         [Route("UpdateStaff"), HttpPost]
         public async Task<ResponseMessageModel> UpdateStaff([FromBody]RequestUpdateStaff model) {
             return await Task.Run(() => updateStaffService.Execute(model));
+        }
+        [Route("UpdateStaffIntegral"), HttpPost]
+        public async Task<ResponseMessageModel> UpdateStaffIntegral([FromBody]RequestUpdateStaffIntegral model) {
+            return await Task.Run(() => updateStaffIntegralService.Execute(model));
         }
     }
 }

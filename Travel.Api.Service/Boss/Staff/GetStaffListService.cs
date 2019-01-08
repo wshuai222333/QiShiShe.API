@@ -15,7 +15,9 @@ namespace QiShiShe.Api.Service.Boss {
             var staff = new Staff() {
                 EnterpriseId = this.Parameter.EnterpriseId,
                 StaffName = this.Parameter.StaffName,
-                StaffCardNo = this.Parameter.StaffCardNo
+                StaffCardNo = this.Parameter.StaffCardNo,
+                Phone = this.Parameter.Phone
+
             };
             this.Result.Data = staffRep.GetStaffList(this.Parameter.pageindex, this.Parameter.pagesize, staff);
         }

@@ -9,5 +9,7 @@
         public string StaffName { get; set; }
 
         public string StaffCardNo { get; set; }
+
+        public string Phone { get; set; }
     }
 }

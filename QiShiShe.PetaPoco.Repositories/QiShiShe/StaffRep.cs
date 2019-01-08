@@ -40,12 +40,15 @@ namespace QiShiShe.PetaPoco.Repositories.QiShiShe {
             if (!string.IsNullOrWhiteSpace(model.StaffCardNo)) {
                 wherestr += " AND StaffCardNo = @2";
             }
+            if (!string.IsNullOrWhiteSpace(model.Phone)) {
+                wherestr += " AND Phone = @3";
+            }
             sql = string.Format(@"
 SELECT  *
 FROM    dbo.Staff
 WHERE 1=1 {0}
 ORDER BY CreateTime DESC", wherestr);
-            return QISHISHEDB.GetInstance().Page<Staff>(pageindex, pagesize, sql, model.EnterpriseId,model.StaffName,model.StaffCardNo);
+            return QISHISHEDB.GetInstance().Page<Staff>(pageindex, pagesize, sql, model.EnterpriseId,model.StaffName,model.StaffCardNo, model.Phone);
         }
         public int UpdateStaff(Staff model) {
             string sql = string.Empty;
@@ -59,6 +62,19 @@ SET StaffName=@1,StaffBirthday = @2,StaffCardNo=@3,DepartmentId = @4,UpdateTime=
 WHERE 1=1 {0}
 ", wherestr);
             return QISHISHEDB.GetInstance().Update<Staff>(sql,model.StaffId, model.StaffName, model.StaffBirthday, model.StaffCardNo, model.DepartmentId, model.UpdateTime);
+        }
+        public int UpdateIntegral(int StaffId,int Integral) {
+            string sql = string.Empty;
+            string wherestr = string.Empty;
+
+            if (StaffId > 0) {
+                wherestr += " AND StaffId = @0";
+            }
+            sql = string.Format(@"
+SET Integral=Integral+@1
+WHERE 1=1 {0}
+", wherestr);
+            return QISHISHEDB.GetInstance().Update<Staff>(sql, StaffId, Integral);
         }
     }
 }
