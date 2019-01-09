@@ -76,5 +76,24 @@ WHERE 1=1 {0}
 ", wherestr);
             return QISHISHEDB.GetInstance().Update<Staff>(sql, StaffId, Integral);
         }
+        public Staff StaffLogin(Staff model) {
+            #region sql
+            string wherestr = string.Empty;
+            if (!string.IsNullOrEmpty(model.UserName)) {
+                wherestr += " AND UserName = @0";
+            }
+            if (!string.IsNullOrEmpty(model.UserPwd)) {
+                wherestr += " AND UserPwd = @1 ";
+            }
+            string sql = string.Format(@"
+            SELECT  *
+            FROM    dbo.Staff
+            WHERE   1 = 1
+            {0}
+            ", wherestr);
+            #endregion
+            return QISHISHEDB.GetInstance().SingleOrDefault<Staff>(sql,
+                              model.UserName, model.UserPwd);
+        }
     }
 }
