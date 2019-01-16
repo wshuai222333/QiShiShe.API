@@ -3,7 +3,7 @@ using QiShiShe.Entity.Model;
 using QiShiShe.PetaPoco.Repositories.QiShiShe;
 using System;
 
-namespace QiShiShe.Api.Service.Enterprise {
+namespace QiShiShe.Api.Service {
     public class StaffLoginService : ApiOriBase<RequestStaffLogin> {
         #region 注入服务
         public StaffRep staffRep { get; set; }

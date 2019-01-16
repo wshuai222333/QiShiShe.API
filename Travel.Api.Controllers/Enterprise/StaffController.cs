@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using QiShiShe.Api.DTO;
 using QiShiShe.Api.DTO.Enterprise.Request.Staff;
-using QiShiShe.Api.Service.Enterprise;
+using QiShiShe.Api.Service;
 using System.Threading.Tasks;
 
 namespace QiShiShe.Api.Controllers.Enterprise {
