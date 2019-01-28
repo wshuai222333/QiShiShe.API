@@ -1,5 +1,6 @@
 ﻿using PetaPoco.NetCore;
 using QiShiShe.Entity.Model;
+using System.Collections.Generic;
 
 namespace QiShiShe.PetaPoco.Repositories.QiShiShe {
     public  class StaffRep {
@@ -49,6 +50,28 @@ FROM    dbo.Staff
 WHERE 1=1 {0}
 ORDER BY CreateTime DESC", wherestr);
             return QISHISHEDB.GetInstance().Page<Staff>(pageindex, pagesize, sql, model.EnterpriseId,model.StaffName,model.StaffCardNo, model.Phone);
+        }
+        public List<Staff> GetStaffList(Staff model) {
+            string sql = string.Empty;
+            string wherestr = string.Empty;
+            if (model.EnterpriseId > 0) {
+                wherestr += " AND EnterpriseId = @0";
+            }
+            if (!string.IsNullOrWhiteSpace(model.StaffName)) {
+                wherestr += " AND StaffName = @1";
+            }
+            if (!string.IsNullOrWhiteSpace(model.StaffCardNo)) {
+                wherestr += " AND StaffCardNo = @2";
+            }
+            if (!string.IsNullOrWhiteSpace(model.Phone)) {
+                wherestr += " AND Phone = @3";
+            }
+            sql = string.Format(@"
+SELECT  *
+FROM    dbo.Staff
+WHERE 1=1 {0}
+ORDER BY CreateTime DESC", wherestr);
+            return QISHISHEDB.GetInstance().Fetch<Staff>(sql, model.EnterpriseId, model.StaffName, model.StaffCardNo, model.Phone);
         }
         public int UpdateStaff(Staff model) {
             string sql = string.Empty;

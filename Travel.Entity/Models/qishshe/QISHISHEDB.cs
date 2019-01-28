@@ -247,6 +247,81 @@ namespace QiShiShe.Entity.Model
 		[Column] public string Phone {get;set;}
 		
 	 }
+	
+	 [TableName("dbo.OrderPassenger")]
+	 [PrimaryKey("OrderPassengerId")]
+	 [ExplicitColumns]
+     public partial class OrderPassenger:QISHISHEDB.Record<OrderPassenger>
+	 {
+		
+		[Column] public int OrderPassengerId {get;set;}
+		[Column] public string OrderId {get;set;}
+		[Column] public string PassengerName {get;set;}
+		[Column] public string PassengerCardNo {get;set;}
+		[Column] public string PassengerCardType {get;set;}
+		[Column] public DateTime? Passengerbirthday {get;set;}
+		
+	 }
+	
+	 [TableName("dbo.OrderApartment")]
+	 [PrimaryKey("OrderApartmentId")]
+	 [ExplicitColumns]
+     public partial class OrderApartment:QISHISHEDB.Record<OrderApartment>
+	 {
+		
+		[Column] public int OrderApartmentId {get;set;}
+		[Column] public int? ApartmentType {get;set;}
+		[Column] public int? Apartmentcount {get;set;}
+		
+	 }
+	
+	 [TableName("dbo.DemandOrder")]
+	 [PrimaryKey("DemandOrderId")]
+	 [ExplicitColumns]
+     public partial class DemandOrder:QISHISHEDB.Record<DemandOrder>
+	 {
+		
+		[Column] public int DemandOrderId {get;set;}
+		[Column] public string OrderId {get;set;}
+		[Column] public int? BookingType {get;set;}
+		[Column] public int? TravelType {get;set;}
+		[Column] public DateTime? DepartDate {get;set;}
+		[Column] public DateTime? ArriveDate {get;set;}
+		[Column] public string DepartCity {get;set;}
+		[Column] public string ArriveCity {get;set;}
+		[Column] public int? TravelWay {get;set;}
+		[Column] public string ExpectDepartTime {get;set;}
+		[Column] public string ExpectArrivetime {get;set;}
+		[Column] public string TravelOthers {get;set;}
+		[Column] public DateTime? HotelCheckinDate {get;set;}
+		[Column] public DateTime? HotelCheckoutDate {get;set;}
+		[Column] public int? HotelType {get;set;}
+		[Column] public string Destination {get;set;}
+		[Column] public int? HotelLocation {get;set;}
+		[Column] public string HotelOthers {get;set;}
+		
+	 }
+	
+	 [TableName("dbo.T_AirPorts")]
+	 [PrimaryKey("ID")]
+	 [ExplicitColumns]
+     public partial class T_AirPorts:QISHISHEDB.Record<T_AirPorts>
+	 {
+		
+		[Column] public int ID {get;set;}
+		[Column] public string City_Name {get;set;}
+		[Column] public string City_Code {get;set;}
+		[Column] public string City_EnName {get;set;}
+		[Column] public string Airport_name {get;set;}
+		[Column] public int? Order_Index {get;set;}
+		[Column] public string City_PinYin {get;set;}
+		[Column] public string City_JianPin {get;set;}
+		[Column] public string City_OtherCode {get;set;}
+		[Column] public int? City_Up {get;set;}
+		[Column] public int? City_Type {get;set;}
+		[Column] public string City_Ports {get;set;}
+		
+	 }
 
 }
 
