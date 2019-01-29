@@ -303,6 +303,8 @@ namespace QiShiShe.Entity.Model
 		[Column] public int? HotelLocation {get;set;}
 		[Column] public string HotelOthers {get;set;}
 		[Column] public DateTime? CreateTime {get;set;}
+		[Column] public int? StaffId {get;set;}
+		[Column] public int? EnterpriseId {get;set;}
 		
 	 }
 	

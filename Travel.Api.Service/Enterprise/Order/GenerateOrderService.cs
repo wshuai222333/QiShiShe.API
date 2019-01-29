@@ -17,6 +17,7 @@ namespace QiShiShe.Api.Service {
         /// </summary>
         protected override void ExecuteMethod() {
             try {
+                var OrderId = DateTime.Now.ToString("yyyyMMddHHmmsss");
                 var demandOrder = new DemandOrder() {
                     ArriveCity = this.Parameter.ArriveCity,
                     ArriveDate = this.Parameter.ArriveDate,
@@ -34,10 +35,14 @@ namespace QiShiShe.Api.Service {
                     TravelOthers = this.Parameter.TravelOthers,
                     TravelType = this.Parameter.TravelType,
                     TravelWay = this.Parameter.TravelWay,
-                    CreateTime = DateTime.Now
+                    CreateTime = DateTime.Now,
+                    OrderId = OrderId,
+                    EnterpriseId = this.Parameter.EnterpriseId,
+                    StaffId = this.Parameter.StaffId
                 };
                 foreach (var passenger in this.Parameter.Passengers) {
                     var orderPassenger = new OrderPassenger() {
+                        OrderId = OrderId,
                         CreateTime = DateTime.Now,
                         PassengerName = passenger.PassengerName,
                         PassengerCardNo = passenger.PassengerCardNo
@@ -46,6 +51,7 @@ namespace QiShiShe.Api.Service {
                 };
                 foreach (var apartment in this.Parameter.Apartments) {
                     var orderApartment = new OrderApartment() {
+                        OrderId = OrderId,
                         CreateTime = DateTime.Now,
                         Apartmentcount = apartment.Apartmentcount,
                         ApartmentType = apartment.ApartmentType
@@ -53,7 +59,7 @@ namespace QiShiShe.Api.Service {
                     orderApartmentRep.Insert(orderApartment);
                 }
                 this.Result.Data = demandOrderRep.Insert(demandOrder);
-            } catch(Exception ex) {
+            } catch (Exception ex) {
                 throw new AggregateException(ex);
             }
         }

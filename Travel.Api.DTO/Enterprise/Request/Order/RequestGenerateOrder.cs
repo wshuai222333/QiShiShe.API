@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace QiShiShe.Api.DTO.Enterprise.Request.Order {
     public class RequestGenerateOrder:RequestOriBaseModel {
@@ -38,6 +37,10 @@ namespace QiShiShe.Api.DTO.Enterprise.Request.Order {
         public List<Apartment> Apartments { get; set; }
 
         public List<Passenger> Passengers { get; set; }
+
+        public int EnterpriseId { get; set; }
+
+        public int StaffId { get; set; }
     }
 
     public class Apartment {

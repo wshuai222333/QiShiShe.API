@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using QiShiShe.Api.DTO;
 using QiShiShe.Api.DTO.Enterprise.Request.Order;
 using QiShiShe.Api.Service;
+using QiShiShe.Api.Service.Enterprise.Order;
 using System.Threading.Tasks;
 
 namespace QiShiShe.Api.Controllers.Enterprise {
@@ -12,12 +13,18 @@ namespace QiShiShe.Api.Controllers.Enterprise {
     public class OrderController : BaseController {
         #region 注入服务
         public GenerateOrderService generateOrderService { get; set; }
+
+        public GetDemandOrderListService getDemandOrderListService { get; set; }
         #endregion
 
         [Route("GenerateOrder"), HttpPost]
         public async Task<ResponseMessageModel> StaffLogin([FromBody]RequestGenerateOrder model) {
             return await Task.Run(() => generateOrderService.Execute(model));
         }
-        
+        [Route("GetDemandOrderList"), HttpPost]
+        public async Task<ResponseMessageModel> GetDemandOrderList([FromBody]RequestGetDemandOrderList model) {
+            return await Task.Run(() => getDemandOrderListService.Execute(model));
+        }
+
     }
 }
