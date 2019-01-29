@@ -260,6 +260,7 @@ namespace QiShiShe.Entity.Model
 		[Column] public string PassengerCardNo {get;set;}
 		[Column] public string PassengerCardType {get;set;}
 		[Column] public DateTime? Passengerbirthday {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
 		
 	 }
 	
@@ -272,6 +273,8 @@ namespace QiShiShe.Entity.Model
 		[Column] public int OrderApartmentId {get;set;}
 		[Column] public int? ApartmentType {get;set;}
 		[Column] public int? Apartmentcount {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
+		[Column] public string OrderId {get;set;}
 		
 	 }
 	
@@ -299,6 +302,7 @@ namespace QiShiShe.Entity.Model
 		[Column] public string Destination {get;set;}
 		[Column] public int? HotelLocation {get;set;}
 		[Column] public string HotelOthers {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
 		
 	 }
 	
