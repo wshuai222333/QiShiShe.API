@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace QiShiShe.Api.Service.Enterprise.Order {
+namespace QiShiShe.Api.Service{
     public class GetDemandOrderListService : ApiOriBase<RequestGetDemandOrderList> {
         #region 注入服务
         public DemandOrderRep demandOrderRep { get; set; }

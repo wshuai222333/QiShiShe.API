@@ -38,7 +38,8 @@ namespace QiShiShe.Api.Service {
                     CreateTime = DateTime.Now,
                     OrderId = OrderId,
                     EnterpriseId = this.Parameter.EnterpriseId,
-                    StaffId = this.Parameter.StaffId
+                    StaffId = this.Parameter.StaffId,
+                    Status = 0
                 };
                 foreach (var passenger in this.Parameter.Passengers) {
                     var orderPassenger = new OrderPassenger() {

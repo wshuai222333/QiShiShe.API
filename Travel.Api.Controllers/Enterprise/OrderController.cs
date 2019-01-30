@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using QiShiShe.Api.DTO;
 using QiShiShe.Api.DTO.Enterprise.Request.Order;
 using QiShiShe.Api.Service;
-using QiShiShe.Api.Service.Enterprise.Order;
 using System.Threading.Tasks;
 
 namespace QiShiShe.Api.Controllers.Enterprise {

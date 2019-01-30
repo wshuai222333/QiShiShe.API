@@ -16,5 +16,15 @@ WHERE 1=1 {0}
 ORDER BY CreateTime DESC", wherestr);
             return QISHISHEDB.GetInstance().Page<DemandOrder>(pageindex, pagesize, sql, EnterpriseId);
         }
+        public Page<DemandOrder> GetEnterpriseListByBoss(int pageindex, int pagesize) {
+            string sql = string.Empty;
+            string wherestr = string.Empty;
+            sql = string.Format(@"
+SELECT  *
+FROM    dbo.DemandOrder
+WHERE 1=1 {0}
+ORDER BY CreateTime DESC", wherestr);
+            return QISHISHEDB.GetInstance().Page<DemandOrder>(pageindex, pagesize, sql);
+        }
     }
 }

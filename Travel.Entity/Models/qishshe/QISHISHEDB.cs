@@ -305,6 +305,7 @@ namespace QiShiShe.Entity.Model
 		[Column] public DateTime? CreateTime {get;set;}
 		[Column] public int? StaffId {get;set;}
 		[Column] public int? EnterpriseId {get;set;}
+		[Column] public int? Status {get;set;}
 		
 	 }
 	
