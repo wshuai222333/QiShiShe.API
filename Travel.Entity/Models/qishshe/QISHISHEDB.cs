@@ -329,6 +329,23 @@ namespace QiShiShe.Entity.Model
 		[Column] public string City_Ports {get;set;}
 		
 	 }
+	
+	 [TableName("dbo.SelectAirTicket")]
+	 [PrimaryKey("SelectAirTicketId")]
+	 [ExplicitColumns]
+     public partial class SelectAirTicket:QISHISHEDB.Record<SelectAirTicket>
+	 {
+		
+		[Column] public int SelectAirTicketId {get;set;}
+		[Column] public string OrderId {get;set;}
+		[Column] public DateTime? DepartDate {get;set;}
+		[Column] public DateTime? ArriveDate {get;set;}
+		[Column] public string DepartCity {get;set;}
+		[Column] public string ArriveCity {get;set;}
+		[Column] public string FightNo {get;set;}
+		[Column] public int? SeatType {get;set;}
+		
+	 }
 
 }
 
