@@ -338,12 +338,19 @@ namespace QiShiShe.Entity.Model
 		
 		[Column] public int SelectAirTicketId {get;set;}
 		[Column] public string OrderId {get;set;}
-		[Column] public DateTime? DepartDate {get;set;}
-		[Column] public DateTime? ArriveDate {get;set;}
+		[Column] public DateTime? OneDepartDate {get;set;}
+		[Column] public DateTime? OneArriveDate {get;set;}
+		[Column] public DateTime? TwoDepartDate {get;set;}
+		[Column] public DateTime? TwoArriveDate {get;set;}
+		[Column] public string OneFightNo {get;set;}
+		[Column] public string TwoFightNo {get;set;}
 		[Column] public string DepartCity {get;set;}
 		[Column] public string ArriveCity {get;set;}
-		[Column] public string FightNo {get;set;}
 		[Column] public int? SeatType {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
+		[Column] public decimal? TicketPrice {get;set;}
+		[Column] public decimal? FuelAirPrice {get;set;}
+		[Column] public int? TravelType {get;set;}
 		
 	 }
 

@@ -19,13 +19,20 @@ namespace QiShiShe.Api.Service.Boss
             var selectAirTicket = new SelectAirTicket()
             {
                 ArriveCity = this.Parameter.ArriveCity,
-                ArriveDate = this.Parameter.ArriveDate,
                 DepartCity = this.Parameter.DepartCity,
-                DepartDate = this.Parameter.DepartDate,
-                FightNo = this.Parameter.FightNo,
                 OrderId = this.Parameter.OrderId,
-                SeatType = this.Parameter.SeatType
-                  
+                SeatType = this.Parameter.SeatType,
+                CreateTime = DateTime.Now,
+                FuelAirPrice = this.Parameter.FuelAirPrice,
+                OneArriveDate = this.Parameter.OneArriveDate,
+                OneDepartDate = this.Parameter.OneDepartDate,
+                OneFightNo = this.Parameter.OneFightNo,
+                TicketPrice = this.Parameter.TicketPrice,
+                TwoArriveDate = this.Parameter.TwoArriveDate,
+                TwoDepartDate = this.Parameter.TwoDepartDate,
+                TwoFightNo = this.Parameter.TwoFightNo,
+                TravelType = this.Parameter.TravelType
+
             };
             this.Result.Data = selectAirTicketRep.Insert(selectAirTicket);
         }
