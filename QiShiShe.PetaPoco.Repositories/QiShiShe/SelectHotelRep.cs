@@ -1,12 +1,18 @@
 ﻿using QiShiShe.Entity.Model;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace QiShiShe.PetaPoco.Repositories.QiShiShe {
-    public class OrderApartmentRep {
-        public object Insert(OrderApartment model) {
+namespace QiShiShe.PetaPoco.Repositories.QiShiShe
+{
+    public class SelectHotelRep
+    {
+        public object Insert(SelectHotel model)
+        {
             return QISHISHEDB.GetInstance().Insert(model);
         }
-        public List<OrderApartment> GetOrderApartmentList(string OrderId)
+
+        public List<SelectHotel> GetSelectHotelList(string OrderId)
         {
             string sql = string.Empty;
             string wherestr = string.Empty;
@@ -15,10 +21,10 @@ namespace QiShiShe.PetaPoco.Repositories.QiShiShe {
 
             sql = string.Format(@"
 SELECT  *
-FROM    dbo.OrderApartment
+FROM    dbo.SelectHotel
 WHERE 1=1 {0}
 ORDER BY CreateTime DESC", wherestr);
-            return QISHISHEDB.GetInstance().Fetch<OrderApartment>(sql, OrderId);
+            return QISHISHEDB.GetInstance().Fetch<SelectHotel>(sql, OrderId);
         }
     }
 }
