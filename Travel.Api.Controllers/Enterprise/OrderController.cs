@@ -5,7 +5,8 @@ using QiShiShe.Api.DTO.Enterprise.Request.Order;
 using QiShiShe.Api.Service;
 using System.Threading.Tasks;
 
-namespace QiShiShe.Api.Controllers.Enterprise {
+namespace QiShiShe.Api.Controllers.Enterprise
+{
     [Produces("application/json")]
     [Route("api/Enterprise")]
     [EnableCors("AllowSameDomain")]
@@ -14,6 +15,8 @@ namespace QiShiShe.Api.Controllers.Enterprise {
         public GenerateOrderService generateOrderService { get; set; }
 
         public GetDemandOrderListService getDemandOrderListService { get; set; }
+
+        public GetSelectAirTicketTopService getSelectAirTicketTopService { get; set; }
         #endregion
 
         [Route("GenerateOrder"), HttpPost]
@@ -23,6 +26,11 @@ namespace QiShiShe.Api.Controllers.Enterprise {
         [Route("GetDemandOrderList"), HttpPost]
         public async Task<ResponseMessageModel> GetDemandOrderList([FromBody]RequestGetDemandOrderList model) {
             return await Task.Run(() => getDemandOrderListService.Execute(model));
+        }
+        [Route("GetSelectAirTicketTop"), HttpPost]
+        public async Task<ResponseMessageModel> GetSelectAirTicketTop([FromBody]RequestGetSelectAirTicketList model)
+        {
+            return await Task.Run(() => getSelectAirTicketTopService.Execute(model));
         }
 
     }
