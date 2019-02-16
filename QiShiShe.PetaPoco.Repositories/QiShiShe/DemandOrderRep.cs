@@ -26,5 +26,18 @@ WHERE 1=1 {0}
 ORDER BY CreateTime DESC", wherestr);
             return QISHISHEDB.GetInstance().Page<DemandOrder>(pageindex, pagesize, sql);
         }
+        public int UpdateDemandOrderStatus(string OrderId,int Status)
+        {
+            string sql = string.Empty;
+            string wherestr = string.Empty;
+
+            wherestr += " AND OrderId = @0";
+
+            sql = string.Format(@"
+SET Status=@1,OperatConfirmTime=getdate()
+WHERE 1=1 {0}
+", wherestr);
+            return QISHISHEDB.GetInstance().Update<DemandOrder>(sql, OrderId, Status);
+        }
     }
 }

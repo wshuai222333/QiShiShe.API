@@ -54,6 +54,7 @@ ORDER BY CreateTime DESC", wherestr);
             }
             sql = string.Format(@"
 SET DepartmentName=@2,UpdateTime=@3
+WHERE 1=1 {0}
 ", wherestr);
             return QISHISHEDB.GetInstance().Update<Department>(sql, model.EnterpriseId, model.DepartmentId, model.DepartmentName, model.UpdateTime);
         }

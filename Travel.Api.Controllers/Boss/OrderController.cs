@@ -27,6 +27,8 @@ namespace QiShiShe.Api.Controllers.Boss {
         public GetSelectHotelListService getSelectHotelListService { get; set; }
         public GetOrderPassengerListService getOrderPassengerListService { get; set; }
         public GetOrderApartmentListService getOrderApartmentListService { get; set; }
+
+        public UpdateDemandOrderStatusService updateDemandOrderStatusService { get; set; }
         #endregion
 
 
@@ -73,6 +75,11 @@ namespace QiShiShe.Api.Controllers.Boss {
         public async Task<ResponseMessageModel> GetOrderApartmentList([FromBody]RequestGetOrderPassengerList model)
         {
             return await Task.Run(() => getOrderApartmentListService.Execute(model));
+        }
+        [Route("UpdateDemandOrderStatus"), HttpPost]
+        public async Task<ResponseMessageModel> UpdateDemandOrderStatus([FromBody]RequestUpdateDemandOrderStatus model)
+        {
+            return await Task.Run(() => updateDemandOrderStatusService.Execute(model));
         }
     }
 }
