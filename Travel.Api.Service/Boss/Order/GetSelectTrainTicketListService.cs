@@ -22,6 +22,7 @@ namespace QiShiShe.Api.Service.Boss
             {
                 var model = new SelectTrainTicketExtenModel()
                 {
+                    SelectTrainTicketId = item.SelectTrainTicketId,
                     TravelType = item.TravelType,
                     SeatType = item.SeatType,
                     Citys = item.DepartCity + "-" + item.ArriveCity,

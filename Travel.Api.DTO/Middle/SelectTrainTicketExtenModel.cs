@@ -20,5 +20,7 @@ namespace QiShiShe.Api.DTO.Middle
 
         public decimal? TicketPrice { get; set; }
 
+        public int SelectTrainTicketId { get; set; }
+
     }
 }

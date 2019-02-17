@@ -26,5 +26,21 @@ WHERE 1=1 {0}
 ORDER BY CreateTime DESC", wherestr);
             return QISHISHEDB.GetInstance().Fetch<SelectHotel>(sql, OrderId);
         }
+        public SelectHotel GetSelectHotelById(int SelectHotelId)
+        {
+            string sql = string.Empty;
+            string wherestr = string.Empty;
+
+            wherestr += " AND SelectHotelId = @0";
+
+            sql = string.Format(@"
+SELECT  *
+FROM    dbo.SelectHotel
+WHERE 1=1 {0}
+ORDER BY CreateTime DESC", wherestr);
+            return QISHISHEDB.GetInstance().SingleOrDefault<SelectHotel>(sql, SelectHotelId);
+        }
+
+
     }
 }

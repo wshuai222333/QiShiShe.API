@@ -17,6 +17,8 @@ namespace QiShiShe.Api.Controllers.Enterprise
         public GetDemandOrderListService getDemandOrderListService { get; set; }
 
         public GetSelectAirTicketTopService getSelectAirTicketTopService { get; set; }
+
+        public ConfirmOrderService confirmOrderService { get; set;}
         #endregion
 
         [Route("GenerateOrder"), HttpPost]
@@ -31,6 +33,11 @@ namespace QiShiShe.Api.Controllers.Enterprise
         public async Task<ResponseMessageModel> GetSelectAirTicketTop([FromBody]RequestGetSelectAirTicketList model)
         {
             return await Task.Run(() => getSelectAirTicketTopService.Execute(model));
+        }
+        [Route("ConfirmOrder"), HttpPost]
+        public async Task<ResponseMessageModel> ConfirmOrder([FromBody]RequestConfirmOrder model)
+        {
+            return await Task.Run(() => confirmOrderService.Execute(model));
         }
 
     }

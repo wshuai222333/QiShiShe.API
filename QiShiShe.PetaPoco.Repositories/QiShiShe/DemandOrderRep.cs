@@ -39,5 +39,31 @@ WHERE 1=1 {0}
 ", wherestr);
             return QISHISHEDB.GetInstance().Update<DemandOrder>(sql, OrderId, Status);
         }
+        public int UpdateOverDemandOrderStatus(string OrderId, int Status)
+        {
+            string sql = string.Empty;
+            string wherestr = string.Empty;
+
+            wherestr += " AND OrderId = @0";
+
+            sql = string.Format(@"
+SET Status=@1,DetermineTime=getdate()
+WHERE 1=1 {0}
+", wherestr);
+            return QISHISHEDB.GetInstance().Update<DemandOrder>(sql, OrderId, Status);
+        }
+        public int UpdateDemandOrderStatusAndTotalPrice(string OrderId, int Status,decimal? TotalPrice)
+        {
+            string sql = string.Empty;
+            string wherestr = string.Empty;
+
+            wherestr += " AND OrderId = @0";
+
+            sql = string.Format(@"
+SET Status=@1,UserConfirmTime=getdate(),TotalPrice = @2
+WHERE 1=1 {0}
+", wherestr);
+            return QISHISHEDB.GetInstance().Update<DemandOrder>(sql, OrderId, Status, TotalPrice);
+        }
     }
 }

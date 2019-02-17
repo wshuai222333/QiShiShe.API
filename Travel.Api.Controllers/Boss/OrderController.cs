@@ -4,7 +4,7 @@ using QiShiShe.Api.DTO;
 using QiShiShe.Api.DTO.Boss.Request.Order;
 using QiShiShe.Api.DTO.Enterprise.Request.Order;
 using QiShiShe.Api.Service.Boss;
-
+using QiShiShe.Api.Service.Boss.Order;
 using System.Threading.Tasks;
 
 namespace QiShiShe.Api.Controllers.Boss {
@@ -29,6 +29,13 @@ namespace QiShiShe.Api.Controllers.Boss {
         public GetOrderApartmentListService getOrderApartmentListService { get; set; }
 
         public UpdateDemandOrderStatusService updateDemandOrderStatusService { get; set; }
+
+        public GetOrderAirTicketListService getOrderAirTicketListService { get; set; }
+
+        public GetOrderTrainTicketListService getOrderTrainTicketListService { get; set; }
+
+
+        public GetOrderHotelListService getOrderHotelListService { get; set; }
         #endregion
 
 
@@ -80,6 +87,21 @@ namespace QiShiShe.Api.Controllers.Boss {
         public async Task<ResponseMessageModel> UpdateDemandOrderStatus([FromBody]RequestUpdateDemandOrderStatus model)
         {
             return await Task.Run(() => updateDemandOrderStatusService.Execute(model));
+        }
+        [Route("GetOrderAirTicketList"), HttpPost]
+        public async Task<ResponseMessageModel> GetOrderAirTicketList([FromBody]RequestGetSelectAirTicketList model)
+        {
+            return await Task.Run(() => getOrderAirTicketListService.Execute(model));
+        }
+        [Route("GetOrderTrainTicketList"), HttpPost]
+        public async Task<ResponseMessageModel> GetOrderTrainTicketList([FromBody]RequestGetSelectTrainTicketList model)
+        {
+            return await Task.Run(() => getOrderTrainTicketListService.Execute(model));
+        }
+        [Route("GetOrderHotelList"), HttpPost]
+        public async Task<ResponseMessageModel> GetOrderHotelList([FromBody]RequestGetSelectHotelList model)
+        {
+            return await Task.Run(() => getOrderHotelListService.Execute(model));
         }
     }
 }

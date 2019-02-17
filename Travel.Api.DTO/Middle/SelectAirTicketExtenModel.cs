@@ -22,5 +22,7 @@ namespace QiShiShe.Api.DTO.Middle
 
         public decimal? FuelPrice { get; set; }
 
+        public int SelectAirTicketId { get; set; }
+
     }
 }

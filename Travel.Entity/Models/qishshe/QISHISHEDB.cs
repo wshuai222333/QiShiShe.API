@@ -306,6 +306,10 @@ namespace QiShiShe.Entity.Model
 		[Column] public int? StaffId {get;set;}
 		[Column] public int? EnterpriseId {get;set;}
 		[Column] public int? Status {get;set;}
+		[Column] public DateTime? OperatConfirmTime {get;set;}
+		[Column] public DateTime? UserConfirmTime {get;set;}
+		[Column] public DateTime? DetermineTime {get;set;}
+		[Column] public decimal? TotalPrice {get;set;}
 		
 	 }
 	
@@ -355,12 +359,12 @@ namespace QiShiShe.Entity.Model
 	 }
 	
 	 [TableName("dbo.SelectTrainTicket")]
-	 [PrimaryKey("SelectAirTrainId")]
+	 [PrimaryKey("SelectTrainTicketId")]
 	 [ExplicitColumns]
      public partial class SelectTrainTicket:QISHISHEDB.Record<SelectTrainTicket>
 	 {
 		
-		[Column] public int SelectAirTrainId {get;set;}
+		[Column] public int SelectTrainTicketId {get;set;}
 		[Column] public string OrderId {get;set;}
 		[Column] public DateTime? OneDepartDate {get;set;}
 		[Column] public DateTime? OneArriveDate {get;set;}
@@ -384,6 +388,68 @@ namespace QiShiShe.Entity.Model
 	 {
 		
 		[Column] public int SelectHotelId {get;set;}
+		[Column] public string HotelName {get;set;}
+		[Column] public string HotelAddress {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
+		[Column] public decimal? TotalPrice {get;set;}
+		[Column] public string OrderId {get;set;}
+		
+	 }
+	
+	 [TableName("dbo.OrderAirTicket")]
+	 [PrimaryKey("OrderAirTicketId")]
+	 [ExplicitColumns]
+     public partial class OrderAirTicket:QISHISHEDB.Record<OrderAirTicket>
+	 {
+		
+		[Column] public int OrderAirTicketId {get;set;}
+		[Column] public string OrderId {get;set;}
+		[Column] public DateTime? OneDepartDate {get;set;}
+		[Column] public DateTime? OneArriveDate {get;set;}
+		[Column] public DateTime? TwoDepartDate {get;set;}
+		[Column] public DateTime? TwoArriveDate {get;set;}
+		[Column] public string OneFightNo {get;set;}
+		[Column] public string TwoFightNo {get;set;}
+		[Column] public string DepartCity {get;set;}
+		[Column] public string ArriveCity {get;set;}
+		[Column] public int? SeatType {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
+		[Column] public decimal? TicketPrice {get;set;}
+		[Column] public decimal? FuelAirPrice {get;set;}
+		[Column] public int? TravelType {get;set;}
+		
+	 }
+	
+	 [TableName("dbo.OrderTrainTicket")]
+	 [PrimaryKey("OrderTrainTicketId")]
+	 [ExplicitColumns]
+     public partial class OrderTrainTicket:QISHISHEDB.Record<OrderTrainTicket>
+	 {
+		
+		[Column] public int OrderTrainTicketId {get;set;}
+		[Column] public string OrderId {get;set;}
+		[Column] public DateTime? OneDepartDate {get;set;}
+		[Column] public DateTime? OneArriveDate {get;set;}
+		[Column] public DateTime? TwoDepartDate {get;set;}
+		[Column] public DateTime? TwoArriveDate {get;set;}
+		[Column] public string OneTrainNo {get;set;}
+		[Column] public string TwoTrainNo {get;set;}
+		[Column] public string DepartCity {get;set;}
+		[Column] public string ArriveCity {get;set;}
+		[Column] public int? SeatType {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
+		[Column] public decimal? TicketPrice {get;set;}
+		[Column] public int? TravelType {get;set;}
+		
+	 }
+	
+	 [TableName("dbo.OrderHotel")]
+	 [PrimaryKey("OrderHotelId")]
+	 [ExplicitColumns]
+     public partial class OrderHotel:QISHISHEDB.Record<OrderHotel>
+	 {
+		
+		[Column] public int OrderHotelId {get;set;}
 		[Column] public string HotelName {get;set;}
 		[Column] public string HotelAddress {get;set;}
 		[Column] public DateTime? CreateTime {get;set;}

@@ -38,5 +38,19 @@ WHERE 1=1 {0}
 ORDER BY CreateTime DESC", wherestr);
             return QISHISHEDB.GetInstance().SingleOrDefault<SelectAirTicket>(sql, OrderId);
         }
+        public SelectAirTicket GetSelectAirTicketById(int SelectAirTicketId)
+        {
+            string sql = string.Empty;
+            string wherestr = string.Empty;
+
+            wherestr += " AND SelectAirTicketId = @0";
+
+            sql = string.Format(@"
+SELECT  *
+FROM    dbo.SelectAirTicket
+WHERE 1=1 {0}
+ORDER BY CreateTime DESC", wherestr);
+            return QISHISHEDB.GetInstance().SingleOrDefault<SelectAirTicket>(sql, SelectAirTicketId);
+        }
     }
 }

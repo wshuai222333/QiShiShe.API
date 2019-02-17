@@ -1,28 +1,29 @@
 ﻿using QiShiShe.Api.DTO.Enterprise.Request.Order;
 using QiShiShe.Api.DTO.Middle;
 using QiShiShe.PetaPoco.Repositories.QiShiShe;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace QiShiShe.Api.Service.Boss
 {
-    public class GetSelectAirTicketListService : ApiOriBase<RequestGetSelectAirTicketList>
+    public class GetOrderAirTicketListService : ApiOriBase<RequestGetSelectAirTicketList>
     {
         #region 注入服务
-        public SelectAirTicketRep selectAirTicketRep { get; set; }
+        public OrderAirTicketRep orderAirTicketRep { get; set; }
         #endregion
         /// <summary>
         /// 执行方法
         protected override void ExecuteMethod()
         {
-            var data = selectAirTicketRep.GetSelectAirTicketList(this.Parameter.OrderId);
+            var data = orderAirTicketRep.GetOrderAirTicketList(this.Parameter.OrderId);
 
             var list = new List<SelectAirTicketExtenModel>();
             foreach (var item in data)
             {
                 var model = new SelectAirTicketExtenModel()
                 {
-                    SelectAirTicketId = item.SelectAirTicketId,
+                    SelectAirTicketId = item.OrderAirTicketId,
                     TravelType = item.TravelType,
                     FuelPrice = item.FuelAirPrice,
                     SeatType = item.SeatType,
