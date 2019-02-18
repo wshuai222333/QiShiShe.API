@@ -5,17 +5,17 @@ namespace QiShiShe.Api.DTO.Enterprise.Request.Order {
     public class RequestGenerateOrder:RequestOriBaseModel {
         public int BookingType { get; set; }
 
-        public int TravelType { get; set; }
+        public int? TravelType { get; set; }
 
-        public DateTime DepartDate { get; set; }
+        public DateTime? DepartDate { get; set; }
 
-        public DateTime ArriveDate { get; set; }
+        public DateTime? ArriveDate { get; set; }
 
         public string DepartCity { get; set; }
 
         public string ArriveCity { get; set; }
 
-        public int TravelWay { get; set; }
+        public int? TravelWay { get; set; }
 
         public string ExpectDepartTime { get; set; }
 
@@ -23,14 +23,14 @@ namespace QiShiShe.Api.DTO.Enterprise.Request.Order {
 
         public string TravelOthers { get; set; }
 
-        public DateTime HotelCheckinDate { get; set; }
-        public DateTime HotelCheckoutDate { get; set; }
+        public DateTime? HotelCheckinDate { get; set; }
+        public DateTime? HotelCheckoutDate { get; set; }
 
-        public int HotelType { get; set; }
+        public int? HotelType { get; set; }
 
         public string Destination { get; set; }
 
-        public int HotelLocation { get; set; }
+        public int? HotelLocation { get; set; }
 
         public string HotelOthers { get; set; }
 

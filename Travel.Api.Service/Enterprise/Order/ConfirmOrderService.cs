@@ -29,6 +29,7 @@ namespace QiShiShe.Api.Service
         /// </summary>
         protected override void ExecuteMethod()
         {
+            
             var selectAirTicket = selectAirTicketRep.GetSelectAirTicketById(this.Parameter.SelectAirTicketId);
 
             var selectTrainTicket = selectTrainTicketRep.GetSelectTrainTicketById(this.Parameter.SelectTrainTicketId);
