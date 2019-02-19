@@ -11,7 +11,7 @@ namespace QiShiShe.PetaPoco.Repositories.QiShiShe {
             return QISHISHEDB.GetInstance().Update(model);
         }
         public int Delete(Staff model) {
-            return QISHISHEDB.GetInstance().Delete(model);
+            return QISHISHEDB.GetInstance().Delete<Staff>(model.StaffId);
         }
         public Staff GetStaff(Staff model) {
             #region sql
