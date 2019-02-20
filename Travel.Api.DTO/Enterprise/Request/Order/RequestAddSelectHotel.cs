@@ -13,5 +13,7 @@ namespace QiShiShe.Api.DTO.Enterprise.Request.Order
         public string HotelAddress { get; set; }
 
         public decimal? TotalPrice { get; set; }
+
+        public string HotelRules { get; set; }
     }
 }

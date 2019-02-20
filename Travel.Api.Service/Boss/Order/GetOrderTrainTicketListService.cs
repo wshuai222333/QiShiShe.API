@@ -31,7 +31,7 @@ namespace QiShiShe.Api.Service.Boss
                     TicketPrice = item.TicketPrice,
                     DepartDate = Convert.ToDateTime(item.OneDepartDate).ToString("yyyy-MM-dd HH:mm") + "-" + Convert.ToDateTime(item.OneArriveDate).ToString("HH:mm"),
                     ArriveDate = Convert.ToDateTime(item.TwoDepartDate).ToString("yyyy-MM-dd HH:mm") + "-" + Convert.ToDateTime(item.TwoDepartDate).ToString("HH:mm"),
-
+                    TrainTicketRules = item.TrainTicketRules
                 };
                 list.Add(model);
             }

@@ -24,5 +24,7 @@ namespace QiShiShe.Api.DTO.Middle
 
         public int SelectAirTicketId { get; set; }
 
+        public string AirTicketRules { get; set; }
+
     }
 }

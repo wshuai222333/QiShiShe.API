@@ -8,13 +8,13 @@ namespace QiShiShe.Api.DTO.Enterprise.Request.Order
     {
         public string OrderId { get; set; }
 
-        public DateTime OneDepartDate { get; set; }
+        public DateTime? OneDepartDate { get; set; }
 
-        public DateTime OneArriveDate { get; set; }
+        public DateTime? OneArriveDate { get; set; }
 
-        public DateTime TwoDepartDate { get; set; }
+        public DateTime? TwoDepartDate { get; set; }
 
-        public DateTime TwoArriveDate { get; set; }
+        public DateTime? TwoArriveDate { get; set; }
 
         public string DepartCity { get; set; }
 
@@ -30,5 +30,7 @@ namespace QiShiShe.Api.DTO.Enterprise.Request.Order
         public decimal FuelAirPrice { get; set; }
 
         public int TravelType { get; set; }
+
+        public string AirTicketRules { get; set;}
     }
 }

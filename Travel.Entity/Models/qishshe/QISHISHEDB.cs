@@ -355,6 +355,7 @@ namespace QiShiShe.Entity.Model
 		[Column] public decimal? TicketPrice {get;set;}
 		[Column] public decimal? FuelAirPrice {get;set;}
 		[Column] public int? TravelType {get;set;}
+		[Column] public string AirTicketRules {get;set;}
 		
 	 }
 	
@@ -378,6 +379,7 @@ namespace QiShiShe.Entity.Model
 		[Column] public DateTime? CreateTime {get;set;}
 		[Column] public decimal? TicketPrice {get;set;}
 		[Column] public int? TravelType {get;set;}
+		[Column] public string TrainTicketRules {get;set;}
 		
 	 }
 	
@@ -393,6 +395,7 @@ namespace QiShiShe.Entity.Model
 		[Column] public DateTime? CreateTime {get;set;}
 		[Column] public decimal? TotalPrice {get;set;}
 		[Column] public string OrderId {get;set;}
+		[Column] public string HotelRules {get;set;}
 		
 	 }
 	
@@ -417,6 +420,7 @@ namespace QiShiShe.Entity.Model
 		[Column] public decimal? TicketPrice {get;set;}
 		[Column] public decimal? FuelAirPrice {get;set;}
 		[Column] public int? TravelType {get;set;}
+		[Column] public string AirTicketRules {get;set;}
 		
 	 }
 	
@@ -440,6 +444,7 @@ namespace QiShiShe.Entity.Model
 		[Column] public DateTime? CreateTime {get;set;}
 		[Column] public decimal? TicketPrice {get;set;}
 		[Column] public int? TravelType {get;set;}
+		[Column] public string TrainTicketRules {get;set;}
 		
 	 }
 	
@@ -455,6 +460,31 @@ namespace QiShiShe.Entity.Model
 		[Column] public DateTime? CreateTime {get;set;}
 		[Column] public decimal? TotalPrice {get;set;}
 		[Column] public string OrderId {get;set;}
+		[Column] public string HotelRules {get;set;}
+		
+	 }
+	
+	 [TableName("dbo.Staff2019219")]
+	 [ExplicitColumns]
+     public partial class Staff2019219:QISHISHEDB.Record<Staff2019219>
+	 {
+		
+		[Column] public int StaffId {get;set;}
+		[Column] public int? EnterpriseId {get;set;}
+		[Column] public string EnterpriseName {get;set;}
+		[Column] public string StaffName {get;set;}
+		[Column] public string StaffCardNo {get;set;}
+		[Column] public DateTime? StaffBirthday {get;set;}
+		[Column] public DateTime? CreateTime {get;set;}
+		[Column] public DateTime? UpdateTime {get;set;}
+		[Column] public int? CreateId {get;set;}
+		[Column] public int? UpdateId {get;set;}
+		[Column] public int? DepartmentId {get;set;}
+		[Column] public int? Status {get;set;}
+		[Column] public int? Integral {get;set;}
+		[Column] public string UserName {get;set;}
+		[Column] public string UserPwd {get;set;}
+		[Column] public string Phone {get;set;}
 		
 	 }
 

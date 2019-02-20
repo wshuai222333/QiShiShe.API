@@ -14,6 +14,8 @@ namespace QiShiShe.Api.DTO.Enterprise.Request.Order
 
         public int SelectHotelId { get; set; }
 
+        public decimal TotalPrice { get; set; }
+
     }
     
 }

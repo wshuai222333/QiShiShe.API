@@ -22,5 +22,6 @@ namespace QiShiShe.Api.DTO.Middle
 
         public int SelectTrainTicketId { get; set; }
 
+        public string TrainTicketRules { get; set; }
     }
 }
