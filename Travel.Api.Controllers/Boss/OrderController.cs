@@ -36,6 +36,13 @@ namespace QiShiShe.Api.Controllers.Boss {
 
 
         public GetOrderHotelListService getOrderHotelListService { get; set; }
+
+
+        public DeleteSelectAirTicketService deleteSelectAirTicketService { get; set; }
+
+        public DeleteSelectTrainTicketService deleteSelectTrainTicketService { get; set; }
+
+        public DeleteSelectHotelService deleteSelectHotelService { get; set; }
         #endregion
 
 
@@ -102,6 +109,18 @@ namespace QiShiShe.Api.Controllers.Boss {
         public async Task<ResponseMessageModel> GetOrderHotelList([FromBody]RequestGetSelectHotelList model)
         {
             return await Task.Run(() => getOrderHotelListService.Execute(model));
+        }
+        [Route("DeleteSelectAirTicket"), HttpPost]
+        public async Task<ResponseMessageModel> DeleteSelectAirTicket([FromBody]RequestDeleteSelectAirTicket model) {
+            return await Task.Run(() => deleteSelectAirTicketService.Execute(model));
+        }
+        [Route("DeleteSelectTrainTicket"), HttpPost]
+        public async Task<ResponseMessageModel> DeleteSelectTrainTicket([FromBody]RequestDeleteSelectTrainTicket model) {
+            return await Task.Run(() => deleteSelectTrainTicketService.Execute(model));
+        }
+        [Route("DeleteSelectHotel"), HttpPost]
+        public async Task<ResponseMessageModel> DeleteSelectHotel([FromBody]RequestDeleteSelectHotel model) {
+            return await Task.Run(() => deleteSelectHotelService.Execute(model));
         }
     }
 }

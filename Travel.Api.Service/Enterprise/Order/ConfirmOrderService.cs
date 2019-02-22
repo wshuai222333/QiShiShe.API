@@ -2,8 +2,6 @@
 using QiShiShe.Entity.Model;
 using QiShiShe.PetaPoco.Repositories.QiShiShe;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QiShiShe.Api.Service {
     public class ConfirmOrderService : ApiOriBase<RequestConfirmOrder> {

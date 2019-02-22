@@ -9,7 +9,9 @@ namespace QiShiShe.PetaPoco.Repositories.QiShiShe
         {
             return QISHISHEDB.GetInstance().Insert(model);
         }
-
+        public int Delete(SelectAirTicket model) {
+            return QISHISHEDB.GetInstance().Delete<SelectAirTicket>(model.SelectAirTicketId);
+        }
         public List<SelectAirTicket> GetSelectAirTicketList(string OrderId)
         {
             string sql = string.Empty;
