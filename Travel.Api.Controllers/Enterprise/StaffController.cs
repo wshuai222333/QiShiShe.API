@@ -14,6 +14,8 @@ namespace QiShiShe.Api.Controllers.Enterprise {
         public StaffLoginService staffLoginService { get; set; }
 
         public GetStaffListService getStaffListService { get; set; }
+
+        public GetStaffListChangeValueService getStaffListChangeValueService { get; set; }
         #endregion
 
         [Route("StaffLogin"), HttpPost]
@@ -23,6 +25,11 @@ namespace QiShiShe.Api.Controllers.Enterprise {
         [Route("GetStaffList"), HttpPost]
         public async Task<ResponseMessageModel> GetStaffList([FromBody]RequestGetStaffList model) {
             return await Task.Run(() => getStaffListService.Execute(model));
+        }
+        [Route("GetStaffListChangeValue"), HttpPost]
+        public async Task<ResponseMessageModel> GetStaffListChangeValue([FromBody]RequestGetStaffList model)
+        {
+            return await Task.Run(() => getStaffListChangeValueService.Execute(model));
         }
     }
 }
