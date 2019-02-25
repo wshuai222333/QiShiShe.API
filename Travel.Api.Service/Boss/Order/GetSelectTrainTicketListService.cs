@@ -16,17 +16,20 @@ namespace QiShiShe.Api.Service.Boss {
 
             var list = new List<SelectTrainTicketExtenModel>();
             foreach (var item in data) {
-                var model = new SelectTrainTicketExtenModel() {
-                    SelectTrainTicketId = item.SelectTrainTicketId,
-                    TravelType = item.TravelType,
-                    SeatType = item.SeatType,
-                    Citys = item.DepartCity + "-" + item.ArriveCity,
-                    TrainNos = item.OneTrainNo + "/" + item.TwoTrainNo,
-                    TicketPrice = item.TicketPrice,
-                    DepartDate = Convert.ToDateTime(item.OneDepartDate).ToString("yyyy-MM-dd HH:mm") + "-" + Convert.ToDateTime(item.OneArriveDate).ToString("HH:mm"),
-                    ArriveDate = Convert.ToDateTime(item.TwoDepartDate).ToString("yyyy-MM-dd HH:mm") + "-" + Convert.ToDateTime(item.TwoDepartDate).ToString("HH:mm"),
-                    TrainTicketRules = item.TrainTicketRules
-                };
+                var model = new SelectTrainTicketExtenModel();
+                model.SelectTrainTicketId = item.SelectTrainTicketId;
+                model.TravelType = item.TravelType;
+                model.SeatType = item.SeatType;
+                model.Citys = item.DepartCity + "-" + item.ArriveCity;
+                model.TrainNos = item.OneTrainNo + "/" + item.TwoTrainNo;
+                model.TicketPrice = item.TicketPrice;
+                model.DepartDate = Convert.ToDateTime(item.OneDepartDate).ToString("yyyy-MM-dd HH:mm") + "-" + Convert.ToDateTime(item.OneArriveDate).ToString("HH:mm");
+                if (item.TravelType > 0) {
+                    model.ArriveDate = Convert.ToDateTime(item.TwoDepartDate).ToString("yyyy-MM-dd HH:mm") + "-" + Convert.ToDateTime(item.TwoDepartDate).ToString("HH:mm");
+                }
+
+                model.TrainTicketRules = item.TrainTicketRules;
+
                 list.Add(model);
             }
 
